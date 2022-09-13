@@ -111,6 +111,8 @@ table {
   border-spacing: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+
 /* @font-face {
   font-family: "Source Sans Pro";
   font-weight: 200 900;
@@ -188,7 +190,8 @@ table {
 }
 
 body,
-.source__grid {
+.source__grid,
+#root {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(12, 1fr);
@@ -234,6 +237,7 @@ html.html--scale body {
 @media (min-width: 40.625rem) {
   body > *:not(.source--full-width):not(.source__grid):not(.source--no-marginlr),
   .source__grid > *:not(.source--full-width):not(.source__grid):not(.source--no-marginlr) {
+  
     margin-left: calc(var(--base-lheight) / 2);
     margin-right: calc(var(--base-lheight) / 2);
   }
