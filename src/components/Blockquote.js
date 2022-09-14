@@ -6,9 +6,8 @@ function Blockquote({ quote, source, image, grade }) {
     return (
         <figure className="breakout-quote">
             {image
-                ? <img src={ img } />
+                ? <img src={ img } alt="placeholder image" />
                 : <blockquote>{ quote }</blockquote>
-            
             }
             <figcaption>{ source }</figcaption>
         </figure>
