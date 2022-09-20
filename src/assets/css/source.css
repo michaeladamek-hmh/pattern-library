@@ -163,23 +163,37 @@ table {
 
 :root {
   --base-lheight: 1.875rem;
+  --half-lheight: 0.9375rem;
+  --quart-lheight: 0.5rem;
   --base-fontsize: 1.25rem;
   --col-width: calc((100vw - 2rem) / 12);
+  --gutter-width: 1rem;
 }
 
 @media (min-width: 40.625rem) {
   :root {
     --base-lheight: 2rem;
+    --half-lheight: 1rem;
+    --quart-lheight: 0.5rem;
     --base-fontsize: 1.3125rem;
     --col-width: calc((100vw - (9.75rem - var(--base-lheight))) / 12);
+    --gutter-width: Max(calc(4.875rem - var(--half-lheight)), calc((100vw - 80rem) / 2));
   }
 }
 
 @media (min-width: 80rem) {
   :root {
     --base-lheight: 2.125rem;
+    --half-lheight: 1.0625rem;
+    --quart-lheight: 0.5625rem;
     --base-fontsize: 1.375rem;
     --col-width: calc((100vw - (9.75rem - var(--base-lheight))) / 12);
+  }
+}
+
+@media (min-width: 91.875rem) {
+  :root {
+    --col-width: calc(80rem / 12);
   }
 }
 
