@@ -6,8 +6,17 @@ import PropTypes from 'prop-types';
 function Blockquote({ quote, source, image, varient, grade }) {
     return (
         <>
-        {varient !== 'Source' ? 
-        <aside className={varient !== 'Source' ? 'ss22_ush__blockquote' : ''}>
+        {varient === 'SS-USH' ? 
+            <aside className={varient === 'SS-USH' ? 'ss22_ush__blockquote' : ''}>
+                <figure className="breakout-quote">
+                    {image
+                        ? <img src={ img } alt="placeholder" />
+                        : <blockquote>{ quote }</blockquote>
+                    }
+                    <figcaption>{ source }</figcaption>
+                </figure>
+            </aside>
+        :
             <figure className="breakout-quote">
                 {image
                     ? <img src={ img } alt="placeholder" />
@@ -15,16 +24,7 @@ function Blockquote({ quote, source, image, varient, grade }) {
                 }
                 <figcaption>{ source }</figcaption>
             </figure>
-        </aside>
-        :
-        <figure className="breakout-quote">
-            {image
-                ? <img src={ img } alt="placeholder" />
-                : <blockquote>{ quote }</blockquote>
-            }
-            <figcaption>{ source }</figcaption>
-        </figure>
-            }
+        }
         </>
     );
 }

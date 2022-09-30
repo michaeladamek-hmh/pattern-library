@@ -1,6 +1,5 @@
 import '../assets/css/source.css';
 import Figure from './Figure';
-import img from  '../assets/img/source-img.svg';
 import PropTypes from 'prop-types';
 
 function Aside({ text, side, image, grade }) {
