@@ -9,22 +9,22 @@ export default {
 
 const Template = args => <Aside {...args} />;
 
-export const AsideAlignedRight = Template.bind({});
-AsideAlignedRight.args = {
+export const AlignedRight = Template.bind({});
+AlignedRight.args = {
     side: 'right',
     text: `This is an aside aligned to the right`,
     image: false
 };
 
-export const AsideAlignedLeft = Template.bind({});
-AsideAlignedLeft.args = {
+export const AlignedLeft = Template.bind({});
+AlignedLeft.args = {
     side: 'left',
     text: `This is an aside aligned to the left`,
     image: false
 };
 
-export const AsideWithImage = Template.bind({});
-AsideWithImage.args = {
+export const WithImage = Template.bind({});
+WithImage.args = {
     side: 'right',
     text: `This is an aside aligned to the right`,
     image: true
