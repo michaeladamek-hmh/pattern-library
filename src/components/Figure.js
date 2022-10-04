@@ -1,4 +1,3 @@
-import '../assets/css/source.css';
 import img from  '../assets/img/source-img.svg';
 import PropTypes from 'prop-types';
 

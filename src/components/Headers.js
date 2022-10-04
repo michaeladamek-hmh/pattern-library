@@ -1,4 +1,3 @@
-import '../assets/css/source.css';
 import PropTypes from 'prop-types';
 
 function Headers({ level, text, varient, grade }) {

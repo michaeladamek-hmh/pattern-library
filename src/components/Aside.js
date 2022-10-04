@@ -1,4 +1,3 @@
-import '../assets/css/source.css';
 import Figure from './Figure';
 import PropTypes from 'prop-types';
 
