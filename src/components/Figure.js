@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Figure({ image, caption, grade }) {
     return (
         <figure>
-            <img src={ img } alt="placeholder image" /> 
+            <img src={ img } alt="placeholder" /> 
             {caption
                 ? <figcaption>{ caption }</figcaption>
                 : null
