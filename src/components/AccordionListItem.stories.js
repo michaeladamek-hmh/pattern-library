@@ -1,5 +1,3 @@
-import React from 'react';
-
 import AccordionListItem from './AccordionListItem';
 
 export default {
@@ -10,13 +8,14 @@ export default {
 
 const Template = args => <AccordionListItem {...args} />;
 
-export const AccordionItem = Template.bind({});
-AccordionItem.args = {
-    item: {
+export const Default = Template.bind({});
+Default.args = {
+    item: ({
         id: '1',
-        title: 'Accordion Title',
+        title: 'Accordion Title 2',
         text: `This is a paragraph of placeholder text. It is only here to help show the layout of the page and how the text will flow. Replace this placeholder text with your own meaningful content.`,
         open: false,
-        image: false,
-    }
+        image: false
+    }),
+    grade: 'grade68'
 };

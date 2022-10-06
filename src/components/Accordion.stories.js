@@ -10,11 +10,11 @@ export default {
 
 const Template = args => <Accordion {...args} />;
 
-export const AccordionPlain = Template.bind({});
-AccordionPlain.args = {
+export const Default = Template.bind({});
+Default.args = {
     listItems : [
-        {...AccordionListItemStories.AccordionItem.args.item, id: '1', title: 'A New Accordion Title', text: 'Lorem Ipsum...', open: true},
-        {...AccordionListItemStories.AccordionItem.args.item, id: '2', title: 'A New Accordion Title', text: 'Lorem Ipsum...', open: true, image: true},
-        {...AccordionListItemStories.AccordionItem.args.item, id: '3', title: 'A New Accordion Title', text: 'Lorem Ipsum...'}
+        {...AccordionListItemStories.Default.args.item, id: '1', title: 'A New Accordion Title', text: 'Lorem Ipsum...', open: true},
+        {...AccordionListItemStories.Default.args.item, id: '2', title: 'A New Accordion Title', text: 'Lorem Ipsum...', image: true},
+        {...AccordionListItemStories.Default.args.item, id: '3', title: 'A New Accordion Title', text: 'Lorem Ipsum...'}
     ]
 };
