@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/michaeladamek-hmh/pattern-library/static/css/main.31d6cfe0.css",
+    "main.js": "/michaeladamek-hmh/pattern-library/static/js/main.724ee254.js",
+    "static/js/787.9fae47ce.chunk.js": "/michaeladamek-hmh/pattern-library/static/js/787.9fae47ce.chunk.js",
+    "static/media/source-img.svg": "/michaeladamek-hmh/pattern-library/static/media/source-img.111c6d72eb2bdec102a403ba28bf861a.svg",
+    "index.html": "/michaeladamek-hmh/pattern-library/index.html",
+    "main.724ee254.js.map": "/michaeladamek-hmh/pattern-library/static/js/main.724ee254.js.map",
+    "787.9fae47ce.chunk.js.map": "/michaeladamek-hmh/pattern-library/static/js/787.9fae47ce.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.724ee254.js"
+  ]
+}
