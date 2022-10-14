@@ -90,6 +90,7 @@
     "msw-storybook-addon": "^1.6.3",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
+    "storybook-addon-themes": "^6.1.0",
     "webpack": "^5.73.0"
   },
   "readme": "ERROR: No README data found!",

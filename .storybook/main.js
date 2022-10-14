@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
+    'storybook-addon-themes'
   ],
   framework: "@storybook/react",
   core: {
