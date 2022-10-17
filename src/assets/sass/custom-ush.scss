@@ -5179,4 +5179,90 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
             }
         }
     }
+
+    /* || 5.1 Headers */
+    
+    figure {
+        position: relative;
+        color: $primary-blue;
+        font-weight: 600;
+        padding: calc(var(--base-lheight) +  var(--quart-lheight)) 0 var(--half-lheight);
+            
+        &:after {
+            background-color:  $accent-yellow;
+            content: "";
+            height: 100%;
+            left: calc(-1 * var(--gutter-width));
+            position: absolute;
+            top: 0;
+            width: calc(100% + (2 * var(--gutter-width)));
+            z-index: -1;
+        }
+        
+        @include respond-md {
+            &:after {
+                width: 100vw;
+                left: calc(-1 * var(--gutter-width) - var(--half-lheight));
+            }
+        }
+        
+        @include respond-lg {
+            padding: calc(var(--base-lheight) +  var(--quart-lheight)) 0 var(--half-lheight) var(--base-lheight);
+            // margin-left: calc((var(--col-width) / 2);
+            // padding: var(--base-lheight) var(--half-lheight) var(--half-lheight);
+            // margin: unset;
+            // width: auto;
+            &:after {
+                width: calc(var(--col-width) * 5 - var(--half-lheight) + var(--gutter-width));
+                left: 0;
+            }
+        }
+
+        blockquote {
+            border: unset;
+            margin: 0;
+            padding: var(--half-lheight) 0 0;
+            @include para-size($heading-sm); 
+            &:before {
+                background-image: url(images/blockquotes.svg);
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-size: 3.125rem auto;
+                content: "";
+                height: 100%;
+                position: absolute;
+                top: -1rem;
+                width: 3.125rem;
+            }        
+        
+            @include respond-lg {
+                &:before {
+                    background-size: 5rem auto;
+                    top: -2.5rem;
+                    width: 5rem;
+                }
+            }
+        }
+    
+        figcaption {
+            border: 0 none;
+            border-top: 0.1875rem solid $accent-gold;
+            margin-top: var(--half-lheight);
+            padding: var(--half-lheight) 0 0;
+            @include para-size($body-md);
+            
+            cite {
+                display: block;
+                font-weight: 400;
+            }
+            
+            @include respond-md {
+                width: calc(var(--col-width) * 6 - var(--base-lheight));
+            }
+        
+            @include respond-lg {
+                width: unset;
+            }
+        }
+    }
 }

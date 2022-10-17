@@ -130,6 +130,7 @@
   /* || 4.2 Topic Prep and Review */
   /* || 5.0 Storybook */
   /* || 5.1 Headers */
+  /* || 5.1 Headers */
 }
 .ush body {
   align-items: start;
@@ -6082,6 +6083,108 @@
   .ush h6:after {
     left: calc(var(--icon-wrap) / 2 + var(--half-lheight));
     height: 0.1875rem;
+  }
+}
+.ush figure {
+  position: relative;
+  color: #3644DA;
+  font-weight: 600;
+  padding: calc(var(--base-lheight) + var(--quart-lheight)) 0 var(--half-lheight);
+}
+.ush figure:after {
+  background-color: rgb(255, 248, 117);
+  content: "";
+  height: 100%;
+  left: calc(-1 * var(--gutter-width));
+  position: absolute;
+  top: 0;
+  width: calc(100% + 2 * var(--gutter-width));
+  z-index: -1;
+}
+@media (min-width: 40.625rem) {
+  .ush figure:after {
+    width: 100vw;
+    left: calc(-1 * var(--gutter-width) - var(--half-lheight));
+  }
+}
+@media (min-width: 55rem) {
+  .ush figure {
+    padding: calc(var(--base-lheight) + var(--quart-lheight)) 0 var(--half-lheight) var(--base-lheight);
+  }
+  .ush figure:after {
+    width: calc(var(--col-width) * 5 - var(--half-lheight) + var(--gutter-width));
+    left: 0;
+  }
+}
+.ush figure blockquote {
+  border: unset;
+  margin: 0;
+  padding: var(--half-lheight) 0 0;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+@media (min-width: 40.625rem) {
+  .ush figure blockquote {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .ush figure blockquote {
+    font-size: 1.875rem;
+    line-height: 2.875rem;
+  }
+}
+.ush figure blockquote:before {
+  background-image: url(images/blockquotes.svg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 3.125rem auto;
+  content: "";
+  height: 100%;
+  position: absolute;
+  top: -1rem;
+  width: 3.125rem;
+}
+@media (min-width: 55rem) {
+  .ush figure blockquote:before {
+    background-size: 5rem auto;
+    top: -2.5rem;
+    width: 5rem;
+  }
+}
+.ush figure figcaption {
+  border: 0 none;
+  border-top: 0.1875rem solid rgb(255, 187, 0);
+  margin-top: var(--half-lheight);
+  padding: var(--half-lheight) 0 0;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+@media (min-width: 40.625rem) {
+  .ush figure figcaption {
+    font-size: 1.3125rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 80rem) {
+  .ush figure figcaption {
+    font-size: 1.375rem;
+    line-height: 2.125rem;
+  }
+}
+.ush figure figcaption cite {
+  display: block;
+  font-weight: 400;
+}
+@media (min-width: 40.625rem) {
+  .ush figure figcaption {
+    width: calc(var(--col-width) * 6 - var(--base-lheight));
+  }
+}
+@media (min-width: 55rem) {
+  .ush figure figcaption {
+    width: unset;
   }
 }
 
