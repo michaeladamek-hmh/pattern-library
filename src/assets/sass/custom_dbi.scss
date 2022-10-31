@@ -1,0 +1,3626 @@
+@import "custom/grades/grade_68";
+@import "source/variables";
+@import "source/colors";
+@import "source/mixins";
+// @import "source/layouts/asymm";
+
+/* || TABLE OF CONTENTS 
+
+1.0 STYLEGUIDE
+    1.1 Color Palette
+    1.2 Font Families
+    1.3 Headings
+    
+2.0 UNIVERSAL PATTERNS
+    2.X Interactions
+    
+3.0 PROJECT PATTERNS
+    3.1 Image Caption Accordion
+    3.2 Inquiry Accordion
+    3.3 Flip Cards
+    
+4.0 PAGE STYLES
+    4.1 Project Opener
+    4.2 Compelling Question
+    4.3 Inquiry Plan
+
+5.0 STORTYBOOK COMPONENTS
+
+*/
+
+/* || 1.0 STYLEGUIDE */
+
+/* || 1.1 Color Palette */
+
+$primary-blue: #3644DA;
+$primary-dark-blue: #121F70;
+$primary-medium-blue: #2A3789;
+$primary-red: color-code($red-c50);
+
+
+$theme1: color-code($purple-s50);
+$theme1-gradient: #8111d7;
+$theme2: color-code($cerise-c55);
+$theme2-gradient: #99004f;
+$theme3: color-code($turquoise-s40);
+$theme3-gradient: #026363;
+$theme4: color-code($orange-s40);
+$theme4-gradient: #ce5902;
+
+$white: white;
+$black: black;
+
+$secondary-cerise: color-code($cerise-c5);
+$secondary-purple: color-code($purple-c5);
+$secondary-green: color-code($green-c50);
+$secondary-blue: color-code($blue-c65);
+$secondary-turquoise: color-code($turquoise-c5);
+$secondary-orange: color-code($orange-c5);
+$background-green: color-code($green-c5);
+$background-blue: color-code($blue-c10);
+
+
+$utility-blue: color-code($blue-c50);
+$utility-blue-bg: color-code($blue-c10);
+
+$cool-gray1: color-code($cool-gray-c5);
+$cool-gray2: color-code($cool-gray-c65);
+$cool-gray3: color-code($cool-gray-c70);
+$warm-gray1: color-code($warm-gray-c5);
+$warm-gray2: color-code($warm-gray-c40);
+$gray: color-code($gray-c60);
+$gray2: color-code($gray-c70);
+$buff: #fcf6de;
+
+// Below to be removed
+// $gray1: color-code($cool-gray-c5);
+// $gray2: color-code($warm-gray-c5);
+//
+// $green1: color-code($green-c5);
+$green2: color-code($green-c50);
+//
+// $blue1: color-code($blue-c10);
+// $blue2: color-code($blue-c50);
+// $blue3: color-code($blue-c65);
+//
+// $gray3: color-code($gray-c60);
+// $gray4: color-code($gray-c70);
+//
+// $cool-gray1: color-code($cool-gray-c65);
+// $cool-gray2: color-code($cool-gray-c70);
+// $cool-gray3: color-code($cool-gray-c5);
+//
+// $warm-gray1: color-code($warm-gray-c5);
+// $warm-gray2: color-code($warm-gray-c45);
+//
+$cerise1: color-code($cerise-c50);
+$cerise2: color-code($purple-c5);
+
+/* || 1.2 Font Families */
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 300;
+  font-style: normal;
+  src: url("fonts/egyptianslatelight.woff2") format("woff2"),
+    url("fonts/egyptianslatelight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 300;
+  font-style: italic;
+  src: url("fonts/egyptianslatelightitalic.woff2") format("woff2"),
+    url("fonts/egyptianslatelightitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 350;
+  font-style: normal;
+  src: url("fonts/egyptianslatebook.woff2") format("woff2"),
+    url("fonts/egyptianslatebook.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 350;
+  font-style: italic;
+  src: url("fonts/egyptianslatebookitalic.woff2") format("woff2"),
+    url("fonts/egyptianslatebookitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/egyptianslateregular.woff2") format("woff2"),
+    url("fonts/egyptianslateregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 400;
+  font-style: italic;
+  src: url("fonts/egyptianslateitalic.woff2") format("woff2"),
+    url("fonts/egyptianslateitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 500;
+  font-style: normal;
+  src: url("fonts/egyptianslatemedium.woff2") format("woff2"),
+    url("fonts/egyptianslatemedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 500;
+  font-style: italic;
+  src: url("fonts/egyptianslatemediumitalic.woff2") format("woff2"),
+    url("fonts/egyptianslatemediumitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 700;
+  font-style: normal;
+  src: url("fonts/egyptianslatebold.woff2") format("woff2"),
+    url("fonts/egyptianslatebold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 700;
+  font-style: italic;
+  src: url("fonts/egyptianslatebolditalic.woff2") format("woff2"),
+    url("fonts/egyptianslatebolditalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 900;
+  font-style: normal;
+  src: url("fonts/egyptianslateblack.woff2") format("woff2"),
+    url("fonts/egyptianslateblack.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Egyptian Slate";
+  font-weight: 900;
+  font-style: italic;
+  src: url("fonts/egyptianslateblackitalic.woff2") format("woff2"),
+    url("fonts/egyptianslateblackitalic.woff") format("woff");
+}
+
+// are below used
+// @font-face {
+//   font-family: "Aachen";
+//   src: url("fonts/6e604573-fe47-464a-907d-5748bd06bf95.woff2") format("woff2"),
+//     url("fonts/d09a1e60-0eae-4604-b7e4-37d571465e45.woff") format("woff");
+//   font-weight: 400;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "DIN";
+//   // src: url("fonts/77789f78-02f6-4ce2-bb51-59c49cd029ee.woff2") format("woff2"),
+//   //   url("fonts/68d802ee-4b3a-42c8-9c87-9af8a0da3419.woff") format("woff");
+//   src: url("fonts/f4bdc42f-e58e-43ea-afec-ae4999e2fa73.woff2") format("woff2"),
+//     url("fonts/7c3f8184-8a98-444a-822c-4e9a89edb99f.woff") format("woff");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+// @font-face {
+//   font-family: "Caecilia";
+//   src: url("fonts/fda83ffc-8862-49d5-8b5d-1c7ae136a6c0.woff2") format("woff2"),
+//     url("fonts/eabe8012-9842-48e0-88da-9f8cc6c8ea10.woff") format("woff");
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+.dbi {
+
+        /* || 1.3 Headings */
+
+        %project-opener {
+        color: white;
+        font-family: "DIN", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        }
+
+        %section-page {
+        @include head-size($heading-lg);
+        font-family: "DIN", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        }
+
+        %compelling-lg {
+        @include head-size($heading-lg);
+        font-family: "Egyptian Slate", serif;
+        font-weight: 400;
+        color: white;
+        }
+
+        %standard-head {
+        @include head-size($heading-md);
+        font-weight: 700;
+        }
+
+        %doc-title {
+        @include head-size($heading-md);
+        font-family: "Egyptian Slate", serif;
+        font-weight: 500;
+        color: $secondary-green;
+        }
+
+        %continuation-cq-head {
+        @include head-size($body-md);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        }
+
+        %continuation-cq {
+        @include head-size($heading-sm);
+        font-family: "Egyptian Slate", serif;
+        color: white;
+        }
+
+        h1 {
+        @extend %project-opener;
+        }
+
+        h2 {
+        @extend %standard-head;
+        text-transform: uppercase;
+        }
+
+        /* || 2.0 UNIVERSAL PATTERNS */
+
+        /* || 2.X Global styles */
+
+        html:not(.s9-habitat-editing-enabled) {
+        height: 100%;
+        }
+
+        body {
+        color: $cool-gray2;
+        }
+
+        iframe {
+        width: 100vw;
+        }
+
+        section {
+        // @include respond-md {
+        //   margin-top: var(--half-lheight);
+        // }
+        @include respond-md {
+            grid-column: 1 / span 12;
+        }
+        @include respond-lg {
+            grid-column: 2 / span 10;
+        }
+        }
+
+        /* || 2.X Backgrounds */
+        .background-image {
+        background-color: $warm-gray1;
+        // color: $cool-gray2;
+
+        @include respond-md {
+            background-image: url("images/magnifier-warm-gray.svg");
+            background-position: 25vw
+            calc(var(--base-lheight) * 3 + var(--half-lheight));
+            background-size: 75vw auto;
+            background-repeat: no-repeat;
+        }
+
+        @include respond-lg {
+            background-position: 50vw
+            calc(var(--base-lheight) * 3 + var(--half-lheight));
+            background-size: 50vw auto;
+        }
+        }
+
+        /* || 2.1 Image captions */
+
+        figcaption {
+        p {
+            @include para-size($caption);
+        }
+        }
+
+        /* || 2.2 Page section */
+
+        .source__page-section {
+        margin-top: calc(var(--base-lheight) + var(--half-lheight));
+        padding-top: calc(var(--half-lheight) + var(--quart-lheight));
+        padding-bottom: var(--base-lheight);
+
+        @include respond-md {
+            margin-top: calc(var(--base-lheight) * 2);
+            padding-bottom: calc(var(--base-lheight) + var(--half-lheight));
+        }
+
+        @include respond-lg {
+            padding-top: var(--half-lheight);
+        }
+
+        &:before {
+            background: $warm-gray1;
+        }
+        }
+
+        /* || 2.3 Tables */
+
+        %table-caption {
+            background-color: unset;
+            color: $primary-medium-blue;
+            font-family: 'Egyptian Slate', serif;
+            font-weight: 500;
+            margin-bottom: var(--half-lheight);
+            text-align: left;
+            text-transform: unset;
+            @include head-size($heading-sm);
+        }
+        .source__tablecontainer {
+            border: 0;
+            margin-bottom: var(--base-lheight);
+            
+            @include respond-md {
+                grid-column: 1 / span 12;
+            } 
+            
+            @include respond-lg {
+                grid-column: 2 / span 10;
+            }
+            table {
+                background-color: transparent;
+                @include para-size($body-md);
+                border-collapse: separate;
+                
+                caption {
+                    @extend %table-caption;
+                }
+                
+                tbody {
+                    background-color: $white;
+                    // border-bottom:  0.125rem solid $primary-blue;
+                    th,
+                    td {
+                        background-color: white;
+                        // border: 0.125rem solid $primary-blue;
+                        border-color: color-code($turquoise-c50);
+                        text-indent: 0;
+
+                        &:first-child {
+                            border-left: .125rem solid color-code($turquoise-c50);
+                        }
+                        
+                        &:last-child {
+                            border-right: .125rem solid color-code($turquoise-c50);
+                        }
+                        
+                        *:first-child {
+                            margin-top: 0;
+                        }
+                    }
+                    th {
+                        background-color: color-code($turquoise-c50);
+                        color: $white;
+                        font-weight: 700;
+                        text-align: left;
+                        @include para-size($body-lg);
+                        &[scope=col] {
+                            background-color: color-code($turquoise-c50);
+                            border-left: 0.0625rem solid white; 
+                            border-right: 0.0625rem solid white;
+                            &:first-child {
+                                border-left: 0.125rem solid color-code($turquoise-c50);
+                            }
+                            &:last-child {
+                                border-right: 0.125rem solid color-code($turquoise-c50);
+                            }
+                        }
+                        &[scope=row] {
+                            background-color: $secondary-turquoise;
+                            color: $black;
+                        }
+                    }
+                    
+                    tr {
+                        &:first-of-type {
+                            td, th {
+                                border-top-width: .125rem;
+                                
+                                &:first-child {
+                                    border-top-left-radius: .625rem;
+                                }
+                                &:last-child {
+                                    border-top-right-radius: .625rem;
+                                }
+                            }
+                        }
+                        
+                        &:last-of-type {
+                            td, th {
+                                border-bottom-width: .125rem;
+                                
+                                &:first-child {
+                                    border-bottom-left-radius: .625rem;
+                                }
+                                &:last-child {
+                                    border-bottom-right-radius: .625rem;
+                                }
+                            }
+                        }
+                    }
+                    
+                    td {
+                        ul {
+                            li {
+                                margin-bottom: var(--half-lheight);
+                            }
+                        }
+                    }
+                }
+            }
+        
+        
+        p.caption {
+                @extend %table-caption;
+                margin-bottom: 0;
+            }
+            
+            > ol {
+                border: .125rem solid color-code($turquoise-c50);
+                border-radius: .625rem;
+                overflow: hidden;
+                
+                > li {
+                    background: $secondary-turquoise;
+                    
+                    &:nth-of-type(odd) {
+                        background: $secondary-turquoise;
+                    }
+                    
+                    &:not(:first-child) {
+                        border-top: .125rem solid color-code($turquoise-c50);
+                        margin-top: var(--half-lheight);
+                    }
+                    
+                    &:not(:last-child) {
+                        border-bottom: .125rem solid color-code($turquoise-c50);
+                    }
+                    
+                    &:before {
+                        content: unset;
+                    }
+                    
+                    > ul {
+                        padding: var(--half-lheight) 0;
+                        
+                        > *, > li {
+                            padding: 0 var(--half-lheight);
+                        }
+                        > li {
+                            &:before {
+                                content: unset;
+                            }
+                            
+                            li {
+                                padding-left: var(--base-fontsize);
+                            }
+                        }
+                    }
+                }
+                
+                span {
+                    margin-right: var(--half-lheight);
+                }
+            }
+            
+            ul {
+                margin-top: 0;
+                li {
+                    &:before {
+                        background: color-code($turquoise-c50);
+                        border-color: color-code($turquoise-c50);
+                        border-radius: 50%;
+                    }
+                }
+            }
+            
+            .header {
+                font-weight: 700;
+            }
+            
+            .col-row-headers {
+                    > li {            
+                        > ul {
+                            padding-top: 0;
+                            > li {
+                                &:first-of-type {
+                                    padding: var(--quart-lheight) var(--half-lheight);
+                                    background: color-code($turquoise-c50);
+                                    color: white;
+                                    font-weight: 700;
+                                    margin-bottom: var(--half-lheight);
+                                }
+                            }
+                        }
+                    }
+                }
+        
+        }
+
+        /* || 2.4 Footer */
+
+        footer {
+        grid-column: 1 / -1;
+        margin-top: calc(var(--half-lheight) + var(--quart-lheight));
+
+        @include respond-md {
+            margin-top: var(--base-lheight);
+        }
+        @include respond-lg {
+            grid-column: 2 / span 10;
+        }
+        }
+
+        small {
+        display: block;
+        @include para-size($credits);
+        color: $text-dark;
+
+        margin: 0 0 calc(var(--base-lheight) + var(--half-lheight));
+        }
+
+        /* || 2.5 Helper Classses */
+
+        .source__row-span--two {
+            grid-row-end: span 2;
+        }
+
+        .source__row-span--three {
+            grid-row-end: span 3;
+        }
+
+        .source__row-span--four {
+            grid-row-end: span 4;
+        }
+
+        .source__row-span--five {
+            grid-row-end: span 5;
+        }
+
+        /* || 3.0 PROJECT PATTERNS */
+
+        /* || 3.1 Image Caption Accordion */
+
+        // prevent webkit adding a deafult caret to summaries
+
+        details summary::-webkit-details-marker {
+        display:none;
+        }
+
+        .ss22_dbi__image-accordion {
+        background: $black;
+        z-index: 9;
+        grid-column: 1/-1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+
+        @include respond-md {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        @include respond-lg {
+            width: calc(var(--gutter-width) + var(--col-width) * 5);
+        }
+
+        details {
+            // padding: 1rem 2rem 1rem 2rem;
+            color: $white;
+            @include para-size($caption);
+
+            @include respond-lg {
+            // width: 45%;
+            grid-column: 8 / span 5;
+            }
+
+            & > summary {
+            list-style: none;
+            }
+        }
+
+        summary {
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            @include para-size($caption);
+            padding: var(--quart-lheight) var(--half-lheight);
+            cursor: pointer;
+
+            @include respond-lg {
+            text-align: left;
+            padding: var(--half-lheight) var(--half-lheight) var(--half-lheight)
+                calc(var(--half-lheight) + var(--quart-lheight));
+            }
+
+            &:after {
+            width: calc(var(--half-lheight) + var(--quart-lheight));
+            height: calc(var(--half-lheight) + var(--quart-lheight));
+            // right: 25px;
+            // top: calc(50% - 0.61363637rem);
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: var(--half-lheight);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 27'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='13.5' cy='13.5' r='12.5' stroke='%23fff' stroke-width='2'/%3E%3Cpath d='M5 5h17v17H5z'/%3E%3Cpath fill='%23fff' fill-rule='nonzero' d='M13.5 15l4.2-4 1.8 1.7-6 5.9-6-6L9.5 11z'/%3E%3C/g%3E%3C/svg%3E");
+            }
+        }
+
+        details[open] {
+            summary {
+            padding-bottom: var(--quart-lheight);
+
+            &:after {
+                transform: rotate(180deg);
+            }
+            }
+        }
+
+        p {
+            @include para-size($caption);
+            margin: 0 auto;
+            padding: 0 0 var(--half-lheight);
+            max-width: calc(var(--col-width) * 12);
+
+            @include respond-md {
+            max-width: calc(var(--col-width) * 12 - var(--base-lheight));
+            }
+
+            @include respond-lg {
+            padding: 0 var(--half-lheight) var(--half-lheight)
+                calc(var(--half-lheight) + var(--quart-lheight));
+            margin-right: var(--gutter-width);
+            }
+        }
+        }
+
+        /* || 3.2 Inquiry Accordion */
+
+        .ss22_dbi__accordion {
+        --icon-size: $icon-wrap-lv1;
+        --icon-bg: $icon-boxed-lv1;
+        margin-top: var(--base-lheight);
+
+        & > li {
+            margin-top: 0.1875rem;
+
+            &:first-child {
+            margin-top: 0;
+            }
+        }
+        h5 {
+            @include head-size($body-sm);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: black;
+            @include source__icon--md--unboxed;
+            @include source-_icon--internal--left-top;
+
+            @include respond-md {
+            @include source-_icon--internal--left-center;
+            @include source__icon--sm--unboxed;
+            }
+            &:before {
+            border-radius: 50%;
+            border: 0.125rem solid $warm-gray2;
+            counter-increment: orderedlist;
+            content: counter(orderedlist);
+            color: $warm-gray2;
+            font-family: "DIN";
+            @include head-size(10);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include respond-md {
+                border-width: 0.1875rem;
+            }
+
+            @include respond-lg {
+                border-width: 0.25rem;
+            }
+            }
+
+            strong {
+            @include head-size(10);
+            display: block;
+            font-family: "DIN";
+            }
+        }
+
+        li {
+            margin-top: var(--half-lheight);
+
+            &:before {
+            border: 0;
+            background: $theme1;
+            }
+        }
+
+        summary {
+            &:before {
+            border-radius: 0.625rem;
+            }
+
+            & + * {
+            padding-top: var(--half-lheight);
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: calc(100% - var(--base-lheight));
+                height: 0.125rem;
+                background-color: $theme1;
+                top: 0;
+                left: var(--half-lheight);
+
+                @include respond-md {
+                height: 0.1875rem;
+                }
+
+                @include respond-lg {
+                height: 0.25rem;
+                }
+            }
+            }
+        }
+        }
+
+        .theme-2 {
+        .ss22_dbi__accordion {
+            li {
+            &:before {
+                background: $theme2;
+            }
+            }
+
+            summary {
+            & + * {
+                &:before {
+                background-color: $theme2;
+                }
+            }
+            }
+        }
+        }
+
+        .theme-3 {
+        .ss22_dbi__accordion {
+            li {
+            &:before {
+                background: $theme3;
+            }
+            }
+
+            summary {
+            & + * {
+                &:before {
+                background-color: $theme3;
+                }
+            }
+            }
+        }
+        }
+
+        .theme-4 {
+        .ss22_dbi__accordion {
+            li {
+            &:before {
+                background: $theme4;
+            }
+            }
+
+            summary {
+            & + * {
+                &:before {
+                background-color: $theme4;
+                }
+            }
+            }
+        }
+        }
+
+        /* || 3.3 Flip cards */
+
+        .ss22_dbi__flipcards {
+        --icon-size: $icon-wrap-lv1;
+        --icon-bg: $icon-boxed-lv1;
+        justify-content: flex-start;
+        color: $cool-gray3;
+
+        @include respond-md {
+            grid-column: 1 / span 12;
+        }
+        @include respond-lg {
+            grid-column: 2 / span 10;
+        }
+        @include respond-xl {
+            grid-column: 2 / span 8;
+        }
+
+        li {
+            @include respond-lg {
+            flex-basis: calc(50% - var(--base-lheight));
+            }
+        }
+
+        .source__flipcards__front,
+        .source__flipcards__back,
+        .source__flipcards__back-visuals {
+            @include respond-lg {
+            width: calc((var(--col-width) * 5) - var(--base-lheight));
+            }
+
+            @include respond-xl {
+            width: calc((var(--col-width) * 4) - var(--base-lheight));
+            }
+        }
+        .source__flipcards__front {
+            span {
+            display: block;
+            padding: var(--half-lheight)
+                calc(var(--half-lheight) + var(--icon-size) + var(--quart-lheight))
+                var(--half-lheight) var(--half-lheight);
+            width: 100%;
+            @include para-size($caption);
+            color: color-code($green-c50);
+            font-weight: 600;
+            }
+
+            strong {
+            display: block;
+            @include head-size($body-lg);
+            font-weight: 400;
+            font-family: "Egyptian Slate", serif;
+            }
+        }
+
+        .source__flipcards__front,
+        .source__flipcards__back {
+            border: 0.125rem solid color-code($green-c50);
+        }
+
+        .source__flipcards__back,
+        .source__flipcards__back:after {
+            background: color-code($green-c5);
+        }
+
+        .source__flipcards__back {
+            grid-template-rows: 0 min-content;
+        }
+
+        h5 {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        }
+
+        /* || 3.4 Annotation Icon */
+
+        .ss22_dbi__annotation {
+        display: inline-block;
+        &:after {
+            content: "";
+            width: calc(var(--half-lheight) + var(--quart-lheight));
+            height: calc(var(--half-lheight) + var(--quart-lheight));
+            background: url("images/annotation-icon-blk.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-left: 0.25rem;
+            transform: translateY(calc(var(--quart-lheight) / 2));
+            display: inline-block;
+        }
+        }
+
+        /* || 3.5 Figure Source */
+
+        .ss22_dbi__source {
+        @include para-size($credits);
+        
+            @include respond-md {
+            grid-column: 1 / span 12;
+            }
+        
+            @include respond-lg {
+                grid-column: 1 / span 12;
+                margin-top: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+        
+        
+        + p {
+            @include para-size($body-md);
+                margin-top: calc(var(--quart-lheight) + var(--quart-lheight) / 4);
+            
+            
+            @include respond-lg {
+                margin-top: var(--half-lheight);
+            }
+        }
+        }
+
+        /* || 3.6 Static Quote */
+
+        .ss22_dbi__static-quote {
+        background: $buff;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+        padding: var(--half-lheight);
+        counter-reset: paraNumber;
+        margin-top: var(--base-lheight);
+        
+        &.no-aside {
+            @include respond-xl { 
+                grid-column: 2 / span 8;
+                p {
+                    grid-column: 1 / span 9;
+                }
+            }
+        }
+        
+        @include respond-md {
+            grid-column: 1 / span 12;
+        }
+
+        @include respond-lg {
+            grid-column: 2 / span 10;
+            display: grid;
+            grid-template-columns:
+            calc((100% + var(--base-lheight)) / 10 - var(--half-lheight))
+            repeat(8, 1fr) calc((100% + var(--base-lheight)) / 10 -
+                var(--half-lheight));
+        }
+
+        blockquote {
+            border: 0;
+            padding-left: 0;
+
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            display: grid;
+            grid-template-columns:
+                calc((100% + 2 * var(--base-lheight)) / 10 - var(--base-lheight))
+                repeat(8, 1fr) calc((100% + 2 * var(--base-lheight)) / 10 -
+                    var(--base-lheight));
+            }
+            p {
+            @include respond-lg {
+                grid-column: 1 / span 10;
+            }
+            @include respond-xl {
+                grid-column: 1 / span 7;
+            }
+            }
+
+            & > p {
+            @include para-size($body-lg);
+            font-family: "Egyptian Slate", serif;
+
+            @include respond-md {
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+                text-indent: calc((var(--half-lheight) + var(--quart-lheight)) * -1);
+            }
+
+            @include respond-xl {
+                padding-right: var(--base-lheight);
+            }
+
+            &:before {
+                counter-increment: paraNumber;
+                content: counter(paraNumber);
+                width: calc(var(--half-lheight) + var(--quart-lheight));
+                text-indent: 0;
+                @include para-size($body-sm);
+                font-family: "Source Sans Pro", sans-serif;
+                font-weight: 700;
+                display: block;
+
+                @include respond-md {
+                display: inline-block;
+                line-height: 0;
+                }
+            }   
+            }
+            
+            .uncounted {
+            @include respond-md {
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+                text-indent: 0;
+            }
+
+            &:before {
+                counter-increment: unset;
+                content: unset;
+            }
+            }
+
+            .sans-serif {
+            font-family: "Source Sans Pro", sans-serif;
+            } 
+        }
+
+        aside {
+            padding: 0;
+            background: unset;
+
+            @include respond-md {
+            padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            padding-right: var(--half-lheight);
+            }
+
+            @include respond-xl {
+            grid-column: span 3 / -1;
+            padding-left: 0;
+            padding-right: 0;
+            }
+
+            h6 {
+            @include head-size($body-sm);
+            text-transform: uppercase;
+            color: $secondary-blue;
+            font-weight: 700;
+            @include source__icon--xs;
+            @include source__icon--internal--left-center;
+            padding-top: var(--half-lheight);
+            padding-bottom: var(--half-lheight);
+            padding-left: calc(var(--icon-wrap) + var(--quart-lheight));
+
+            @include respond-md {
+                padding-top: var(--quart-lheight);
+                padding-bottom: var(--quart-lheight);
+            }
+
+            @include respond-xl {
+                padding-top: 0;
+                @include source__icon--sm;
+                @include source__icon--panel--border-left-center;
+                padding-left: calc((var(--half-lheight) + var(--icon-wrap)) / 2);
+            }
+
+            &:before {
+                background-color: $theme1;
+                border-radius: 50%;
+                background-image: url("images/annotation-icon.svg");
+            }
+
+            &:after {
+                height: 0.125rem;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                content: "";
+                position: absolute;
+                background: $theme1;
+
+                @include respond-md {
+                left: calc(var(--icon-wrap) + var(--quart-lheight));
+                }
+                @include respond-xl {
+                left: calc(var(--icon-wrap) / 2 + var(--quart-lheight));
+                right: calc(var(--half-lheight) * -1);
+                height: 0.1875rem;
+                }
+            }
+            }
+            p {
+            @include para-size($caption);
+            color: $cool-gray3;
+
+            &:first-of-type {
+                margin-top: var(--quart-lheight);
+            }
+            }
+        }
+
+        figcaption {
+            @include respond-md {
+            padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            padding-right: var(--half-lheight);
+            }
+
+            @include respond-xl {
+            grid-column: 1 / span 7;
+            }
+
+            p {
+            @include para-size($body-md);
+
+            &:first-child {
+                @include para-size($body-lg);
+
+                + p {
+                margin-top: 0;
+                }
+            }
+            }
+        }
+        
+        cite {
+            font-style: italic;
+        }
+        
+        > p {
+            padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            
+            @include respond-md {
+                width: calc(var(--col-width) * 10 - var(--base-lheight));
+                grid-column: 1 / span 10;
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+            
+            // Added the code above in the md breakpoint, 
+            // noticed this code also here unsure what the desired affect is
+            @include respond-md {
+                width: calc(var(--col-width) * 7 - var(--base-lheight));
+            }
+            
+            &:first-of-type {
+                @include para-size($body-lg);
+            }
+
+            &:not(:first-of-type) {
+                margin-top: 0;
+            }
+        }
+
+        &--gray {
+            background: $cool-gray1;
+        }
+
+        + section,
+        + .free-text-question {
+            margin-top: var(--base-lheight);
+        }
+        }
+
+        .theme-2 {
+        .ss22_dbi__static-quote {
+            aside {
+            h6 {
+                &:before {
+                background-color: $theme2;
+                }
+
+                &:after {
+                background: $theme2;
+                }
+            }
+            }
+        }
+        }
+
+        .theme-3 {
+        .ss22_dbi__static-quote {
+            aside {
+            h6 {
+                &:before {
+                background-color: $theme3;
+                }
+
+                &:after {
+                background: $theme3;
+                }
+            }
+            }
+        }
+        }
+
+        .theme-4 {
+        .ss22_dbi__static-quote {
+            aside {
+            h6 {
+                &:before {
+                background-color: $theme4;
+                }
+
+                &:after {
+                background: $theme4;
+                }
+            }
+            }
+        }
+        }
+
+        /* || 3.7 Compelling Question Quote */
+
+        .ss22_dbi__cq-quote {
+        border: 0;
+        padding-left: 0;
+        margin-top: var(--half-lheight);
+
+        @include respond-md {
+            grid-column: 1 / 13;
+        }
+
+        @include respond-lg {
+            grid-column: 2 / span 8;
+        }
+
+        p {
+            @extend %continuation-cq;
+            color: $theme1;
+            @include source__icon--sm;
+            @include source__icon--top-left;
+
+            @include respond-md {
+            padding-top: 0;
+            @include source__icon--md;
+            @include source__icon--internal--left-center;
+            }
+
+            &:before {
+            border-radius: 50%;
+            border: 0.125rem solid $theme1;
+            content: "?";
+            font-family: "DIN", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include para-size($heading-sm);
+
+            @include respond-md {
+                @include para-size($heading-md);
+                border-width: 0.1875rem;
+            }
+            }
+        }
+        }
+
+        .theme-2 {
+        .ss22_dbi__cq-quote {
+            p {
+            color: $theme2;
+
+            &:before {
+                border-color: $theme2;
+            }
+            }
+        }
+        }
+
+        .theme-3 {
+        .ss22_dbi__cq-quote {
+            p {
+            color: $theme3;
+
+            &:before {
+                border-color: $theme3;
+            }
+            }
+        }
+        }
+
+        .theme-4 {
+        .ss22_dbi__cq-quote {
+            p {
+            color: $theme4;
+
+            &:before {
+                border-color: $theme4;
+            }
+            }
+        }
+        }
+
+        /* || 4.0 PAGE STYLES */
+
+        /* || 4.1 Project Opener */
+
+        .ss22_dbi__opener {
+        padding-bottom: 0;
+        grid-template-rows: min-content 1fr;
+
+        @include respond-lg {
+            grid-template-rows: 1fr;
+        }
+
+        header {
+            align-content: start;
+            padding-bottom: calc(var(--quart-lheight) + var(--half-lheight));
+            position: relative;
+            z-index: 1;
+            
+            @include respond-md {
+                padding-bottom: calc(var(--quart-lheight) + var(--base-lheight));
+            }
+
+            @include respond-lg {
+            grid-column: 1 / span 6;
+            grid-row: 1;
+            filter: drop-shadow(0.3125rem 0 0.5rem rgba(0, 0, 0, 0.25));
+            align-content: center;
+            }
+
+            @include respond-xl {
+            grid-column: 1 / span 5;
+            }
+
+            &:before {
+            background-color: $theme1;
+            background-image: linear-gradient(
+                to bottom,
+                $theme1 50%,
+                $theme1 50%,
+                $theme1-gradient 100%
+            );
+
+            @include respond-lg {
+                width: calc(100% + var(--gutter-width) + var(--base-lheight));
+                clip-path: polygon(
+                0 0,
+                calc(100% - var(--col-width) - var(--base-lheight)) 0,
+                100% 100%,
+                0 100%
+                );
+            }
+            }
+
+            p {
+            display: inline-block;
+            font-weight: 700;
+            padding: 0 var(--quart-lheight) 0 0;
+            position: relative;
+            margin: calc(var(--half-lheight) + var(--quart-lheight)) 0;
+            @include para-size($heading-sm);
+            color: white;
+            text-transform: uppercase;
+            width: fit-content;
+
+            @include respond-md {
+                grid-column: 1 / span 12;
+                margin-top: var(--base-lheight);
+            }
+
+            @include respond-lg {
+                grid-column: 1 / span 10;
+                padding: var(--quart-lheight) var(--half-lheight) var(--quart-lheight) 0;
+            }
+
+            &:before {
+                background-color: $secondary-green;
+                box-shadow: 0 1px 5px -10px rgba(0, 0, 0, 0.2),
+                0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+                content: "";
+                position: absolute;
+                height: 100%;
+                left: calc(var(--gutter-width) * -1);
+                top: 0;
+                width: calc(100% + var(--gutter-width));
+                z-index: -1;
+                border-radius: 0 0.625rem 0.625rem 0;
+
+                @include respond-md {
+                left: calc((var(--gutter-width) + var(--half-lheight)) * -1);
+                width: calc(100% + var(--gutter-width) + var(--half-lheight));
+                }
+            }
+            }
+        }
+
+        h1 {
+            grid-column: 1 / -1;
+            margin-top: 0;
+            z-index: 2;
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            }
+        }
+
+        figure {
+            margin-top: 0;
+            grid-column: 1 / span 12;
+            width: calc(100% + 2 * var(--gutter-width));
+            transform: translateX(calc(-1 * var(--gutter-width)));
+            z-index: 0;
+
+            @include respond-lg {
+            grid-column: 5 / span 8;
+            grid-row: 1;
+            width: calc(100% + var(--gutter-width));
+            transform: translateX(0);
+            }
+
+            img {
+            height: 100%;
+            object-fit: cover;
+
+            & + figcaption {
+                padding: 0;
+            }
+            }
+        }
+
+        &.theme-2 header {
+            &:before {
+            background-color: $theme2;
+            background-image: linear-gradient(
+                to bottom,
+                $theme2 50%,
+                $theme2 50%,
+                $theme2-gradient 100%
+            );
+            }
+        }
+        &.theme-3 header {
+            &:before {
+            background-color: $theme3;
+            background-image: linear-gradient(
+                to bottom,
+                $theme3 50%,
+                $theme3 50%,
+                $theme3-gradient 100%
+            );
+            }
+        }
+        &.theme-4 header {
+            &:before {
+            background-color: $theme4;
+            background-image: linear-gradient(
+                to bottom,
+                $theme4 50%,
+                $theme4 50%,
+                $theme4-gradient 100%
+            );
+            }
+        }
+        }
+
+        /* || 4.2 Compelling Question */
+
+        .ss22_dbi__compelling-question {
+        color: white;
+        align-content: center;
+        padding-top: var(--base-lheight);
+        padding-bottom: var(--base-lheight);
+
+        figure {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            margin: 0;
+            grid-column: unset;
+
+            img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+
+            &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $theme1;
+            opacity: 0.9;
+            }
+        }
+
+        &.theme-2 figure:before {
+            background: $theme2;
+        }
+        &.theme-3 figure:before {
+            background: $theme3;
+        }
+        &.theme-4 figure:before {
+            background: $theme4;
+        }
+
+        h2 {
+            margin-top: 0;
+            padding-bottom: var(--base-lheight);
+            position: relative;
+            @include source__icon--lg--unboxed;
+            @include source__icon--top-left;
+
+            @include respond-md {
+            padding-top: calc(
+                var(--half-lheight) + var(--base-lheight) + var(--icon-wrap)
+            );
+            grid-column: 1 / 13;
+            }
+
+            @include respond-lg {
+            padding-top: 0;
+            grid-column: 3 / span 9;
+            }
+
+            &:before {
+            background-image: url(images/question-icon.svg);
+            @include respond-lg {
+                content: unset;
+            }
+            }
+
+            &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(var(--col-width) * 5);
+            height: 0.25rem;
+            background: white;
+
+            @include respond-md {
+                width: calc(var(--col-width) * 4 - var(--base-lheight));
+                height: 0.375rem;
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 3 - var(--base-lheight));
+                height: 0.5rem;
+            }
+            }
+        }
+
+        p {
+            @extend %compelling-lg;
+
+            @include respond-md {
+            margin-top: calc(var(--half-lheight) + var(--quart-lheight));
+            grid-column: 1 / 13;
+            }
+
+            @include respond-lg {
+            @include source__icon--xl--unboxed;
+            @include source__icon--external--left-top;
+            grid-column: 3 / span 9;
+            }
+
+            &:before {
+            background-image: url(images/question-icon.svg);
+            left: calc(((var(--icon-wrap)) + var(--base-lheight)) * -1);
+            }
+        }
+        }
+
+        /* || 4.3 Inquiry Plan */
+
+        .ss22_dbi__inquiry-plan {
+        background-color: $warm-gray1;
+        // color: $cool-gray2;
+
+        &.background-image {
+            @include respond-md {
+            background-position: 25vw 10.5rem;
+            background-size: 75vw auto;
+            background-repeat: no-repeat;
+            }
+
+            @include respond-lg {
+            background-position: 50vw 10.5rem;
+            background-size: 50vw auto;
+            }
+        }
+
+        header {
+            padding: calc(var(--half-lheight) + var(--quart-lheight)) 0;
+            
+
+            &:before {
+            background-color: $theme1;
+            background-image: linear-gradient(
+                to right,
+                $theme1 0%,
+                $theme1-gradient 100%
+            );
+            }
+
+            h6 {
+            @extend %continuation-cq-head;
+            @include source__icon--sm--unboxed;
+            @include source__icon--internal--left-center;
+            margin-top: 0;
+            
+            @include respond-md {
+                grid-column: 1 / span 12;
+            }
+
+            @include respond-lg {
+                padding-left: 0;
+                grid-column: 2 / span 7;
+            }
+
+            &:before {
+                background-image: url(images/question-icon.svg);
+
+                @include respond-md {
+                content: unset;
+                }
+            }
+            }
+
+            p {
+            @extend %continuation-cq;
+
+            @include respond-md {
+                grid-column: 1 / span 12;
+                margin-top: 0;
+                @include source__icon--sm--unboxed;
+                @include source__icon--internal--left-center;
+            }
+
+            @include respond-lg {
+                padding-left: 0;
+                grid-column: 2 / span 7;
+                @include source__icon--md--unboxed;
+                @include source__icon--external--left-center;
+            }
+
+            &:before {
+                background-image: url(images/question-icon.svg);
+            }
+            }
+        }
+
+        &.theme-2 {
+            header {
+            &:before {
+                background-color: $theme2;
+                background-image: linear-gradient(
+                to right,
+                $theme2 0%,
+                $theme2-gradient 100%
+                );
+            }
+            }
+        }
+
+        &.theme-3 {
+            header {
+            &:before {
+                background-color: $theme3;
+                background-image: linear-gradient(
+                to right,
+                $theme3 0%,
+                $theme3-gradient 100%
+                );
+            }
+            }
+        }
+
+        &.theme-4 {
+            header {
+            &:before {
+                background-color: $theme4;
+                background-image: linear-gradient(
+                to right,
+                $theme4 0%,
+                $theme4-gradient 100%
+                );
+            }
+            }
+        }
+
+        h3 {
+            @extend %standard-head;
+            margin-top: var(--base-lheight);
+            color: $cool-gray3;
+        }
+
+        h3,
+        p,
+        .source__accordion {
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+            @include respond-xl {
+            grid-column: 2 / span 6;
+            }
+        }
+        }
+
+        .ss22_dbi__historical-context,
+        .ss22_dbi__historical-sources {
+        header {
+            p {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $cool-gray3;
+            @include head-size($caption);
+
+            @include respond-md {
+                grid-column: 1 / span 12;
+            }
+            @include respond-lg {
+                grid-column: 2 / span 10;
+            }
+
+            span {
+                font-weight: 600;
+                color: $secondary-green;
+                display: block;
+
+                @include respond-md {
+                display: inline-block;
+                margin-right: var(--half-lheight);
+                }
+            }
+            }
+        }
+
+        h3 {
+            @extend %section-page;
+            position: relative;
+            margin-top: calc(var(--base-lheight) + var(--quart-lheight));
+            @include padding-below(1);
+            color: black;
+
+            @include respond-md {
+            margin-top: calc(var(--base-lheight) + var(--half-lheight));
+            @include padding-below(1.5);
+            grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+                grid-column: 2 / span 6;
+            }
+            
+            @include respond-xl {
+            margin-top: calc(var(--base-lheight) + var(--half-lheight) + var(--quart-lheight));
+            }
+
+            &:before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(var(--col-width) * 6);
+            height: 0.25rem;
+            background: $theme1;
+            content: "";
+
+            @include respond-md {
+                width: calc(var(--col-width) * 5 - var(--base-lheight));
+                height: 0.375rem;
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 3 - var(--base-lheight));
+                height: 0.5rem;
+            }
+            }
+        }
+        
+            section {
+            margin-top: var(--base-lheight);
+            
+            + p {
+                &:not(.ss22_dbi__source) {
+                    margin-top: var(--base-lheight);
+                }
+            }
+            
+            + .ss22_dbi__source {
+                + section {
+                    margin-top: calc(var(--base-lheight) + var(--half-lheight));
+                    
+                    
+                    + section {
+                        margin-top: calc(var(--base-lheight) + var(--half-lheight));
+                    }
+                }
+            }
+            
+            &.explib-hotspot {
+                + p {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        }
+
+        .ss22_dbi__historical-context,
+        .ss22_dbi__historical-sources,
+        .ss22_dbi__historical-sources-contd {
+        & > p,
+        .source__page-section > p {
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+            @include respond-xl {
+            grid-column: 2 / span 6;
+            }
+        }
+
+        header {
+            align-items: start;
+            padding-bottom: 0;
+
+            &:before {
+            content: unset;
+            }
+
+            // & + * {
+            //   margin-top: var(--base-lheight);
+            // }
+
+            aside {
+            background-color: $background-green;
+            margin-top: var(--base-lheight);
+            border-radius: 0.625rem;
+
+            @include respond-md {
+                grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+                grid-column: 8 / span 4;
+                margin-top: calc(var(--base-lheight) + var(--half-lheight));
+            }
+            h6 {
+                text-transform: uppercase;
+                font-weight: 700;
+                @include para-size($caption);
+
+                & + p {
+                margin-top: 0;
+                }
+            }
+
+            p {
+                font-weight: 400;
+                text-transform: unset;
+                @include para-size($caption);
+            }
+            }
+        }
+
+        h5 {
+            @include head-size($heading-sm);
+            text-transform: uppercase;
+            font-weight: 700;
+            padding-bottom: var(--base-lheight);
+            position: relative;
+            color: $gray2;
+
+            @include respond-md {
+            grid-column: 1 / span 10;
+            @include source__icon--sm--unboxed;
+            @include source__icon--top-left;
+            }
+
+            @include respond-lg {
+            padding-top: var(--base-lheight);
+            @include source__icon--md--unboxed;
+            @include source__icon--external--left-center;
+            grid-column: 2 / span 7;
+            }
+
+            &:before {
+            background-image: url("images/notebook_icon-32.svg");
+            }
+
+            &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(var(--col-width) * 8 - var(--base-lheight));
+            height: 0.1875rem;
+            background: $gray;
+            content: "";
+
+            @include respond-md {
+                width: calc(var(--col-width) * 5 - var(--base-lheight));
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 3 - var(--base-lheight));
+            }
+            }
+        }
+
+        figure {
+            figcaption {
+            background: unset;
+            padding: 0;
+
+            @include respond-md {
+                width: calc(var(--col-width) * 10 - var(--base-lheight));
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 7 - var(--base-lheight));
+            }
+
+            @include respond-xl {
+                width: calc(var(--col-width) * 6 - var(--base-lheight));
+            }
+            }
+
+            &.ss22_dbi__static-quote {
+            figcaption {
+                @include respond-md {
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+                }
+
+                @include respond-lg {
+                grid-column: 1 / span 10;
+                padding-right: var(--half-lheight);
+                }
+
+                @include respond-xl {
+                grid-column: 1 / span 7;
+                }
+            }
+            }
+        }
+        
+        }
+
+        /* || 4.5 Historical Context & Task Page */
+
+        .ss22_dbi__historical-context {
+        header {
+            & + * {
+            @include respond-md {
+                margin-top: calc(var(--base-lheight) + var(--half-lheight));
+            }
+            }
+            
+            + p {
+                margin-top: var(--base-lheight);
+            }
+        }
+        
+        figure {
+            margin-top: calc(var(--half-lheight) + var(--quart-lheight));
+            @include respond-md {
+            grid-column: 1 / span 12;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 10;
+            margin-top: var(--base-lheight);
+            }
+
+            img {
+            border-radius: 0.625rem;
+            }
+        }
+
+        h4 {
+            @extend %standard-head;
+            text-transform: uppercase;
+            color: $cool-gray3;
+
+            @include respond-md {
+            grid-column: 1 / span 11;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 10;
+            }
+        }
+
+        ul {
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+
+            @include respond-xl {
+            grid-column: 2 / span 6;
+            }
+
+            li {
+            &:not(:first-child) {
+                margin-top: var(--half-lheight);
+            }
+
+            &:before {
+                border: 0;
+                background-color: $theme1;
+            }
+            }
+        }
+
+        &.theme-2 {
+            h3 {
+            &:before {
+                background: $theme2;
+            }
+            }
+            ul {
+            li {
+                &:before {
+                background-color: $theme2;
+                }
+            }
+            }
+        }
+
+        &.theme-3 {
+            h3 {
+            &:before {
+                background: $theme3;
+            }
+            }
+            ul {
+            li {
+                &:before {
+                background-color: $theme3;
+                }
+            }
+            }
+        }
+
+        &.theme-4 {
+            h3 {
+            &:before {
+                background: $theme4;
+            }
+            }
+            ul {
+            li {
+                &:before {
+                background-color: $theme4;
+                }
+            }
+            }
+        }
+        }
+
+        .ss22_dbi__task {
+        @extend .ss22_dbi__historical-context;
+
+        h3 {
+            &:before {
+            height: 0.25rem;
+
+            @include respond-md {
+                height: 0.3125rem;
+            }
+            }
+        }
+        }
+
+        /* || 4.5 Historical Source */
+
+        .ss22_dbi__historical-sources {
+            .ss22_dbi__source {
+                + section {
+                    margin-top: var(--half-lheight);
+                }
+            }   
+        }
+
+        .ss22_dbi__historical-sources,
+        .ss22_dbi__historical-sources-contd {
+        padding-bottom: 0;
+
+        h3 {
+            &:before {
+            background: $gray;
+            height: 0.25rem;
+
+            @include respond-md {
+                height: 0.3125rem;
+            }
+            }
+        }
+
+        h4 {
+            color: $secondary-green;
+            @include head-size($heading-sm);
+            margin-top: var(--base-lheight);
+            font-weight: 600;
+
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            margin-bottom: var(--half-lheight);
+            }
+
+            strong {
+            @extend %doc-title;
+            display: block;
+            }
+        }
+
+        .source--dual-column {
+            @include respond-md {
+            columns: 1;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 10;
+            columns: 2;
+            }
+        }
+
+        figure {
+            @include respond-md {
+            grid-column: 1 / 13;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 10;
+            }
+        }
+
+        & > aside {
+            background: unset;
+            margin-top: var(--base-lheight);
+            padding: 0;
+
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+            margin-top: var(--half-lheight);
+            grid-column: span 4 / 12;
+            }
+            // @include respond-xl {
+            //     grid-column: span 4 / 12;
+            // }
+
+            img {
+            border-radius: 0.625rem;
+            }
+
+            figcaption {
+            padding: var(--quart-lheight) 0;
+            background: none;
+            }
+        }
+
+        & > p {
+            @include respond-lg {
+            grid-column: 2 / span 6;
+            }
+        }
+        }
+
+        .ss22_dbi__historical-sources-contd {
+        header {
+            & > p {
+            @include head-size(10);
+            font-family: "DIN", sans-serif;
+            text-transform: uppercase;
+            margin-top: var(--base-lheight);
+            padding-bottom: var(--base-lheight);
+            position: relative;
+            color: #000;
+
+            @include respond-md {
+                grid-column: 1 / 13;
+                padding-bottom: calc(var(--base-lheight) + var(--half-lheight));
+            }
+            @include respond-lg {
+                grid-column: 2 / span 6;
+            }
+
+            &:before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: calc(var(--col-width) * 6);
+                height: 0.125rem;
+                background: $gray;
+                content: "";
+
+                @include respond-md {
+                width: calc(var(--col-width) * 4 - var(--base-lheight));
+                height: 0.1875rem;
+                }
+
+                @include respond-lg {
+                width: calc(var(--col-width) * 2 - var(--base-lheight));
+                }
+            }
+            }
+
+            aside {
+            margin-top: var(--base-lheight);
+            }
+        }
+        
+        .free-text-question-table {
+            // outline: 2px solid pink;
+            margin-top: var(--base-lheight);
+
+        }
+        }
+
+        /* || 4.6 Investigator's Notebook */
+
+        .ss22_dbi__investigator {
+        background: $warm-gray1;
+
+        header {
+            padding-bottom: 0;
+
+            &:before {
+            content: unset;
+            }
+            
+            + p {
+                margin-top: var(--base-lheight);
+                
+                @include respond-xl {
+                    margin-top: calc(var(--base-lheight) + var(--quart-lheight));
+                }
+            }
+        }
+
+        h4 {
+            @extend %standard-head;
+            text-transform: uppercase;
+            @include source__icon--md--unboxed;
+            @include source__icon--top-left;
+            padding-bottom: var(--base-lheight);
+            margin-top: var(--base-lheight);
+
+            @include respond-md {
+            grid-column: 1 / span 12;
+            padding-top: var(--base-lheight);
+            margin-top: 0;
+            @include source__icon--internal--left-center;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            padding-left: 0;
+            @include source__icon--external--left-center;
+            }
+
+            &:before {
+            background-image: url("images/notebook_icon-32.svg");
+            }
+
+            &:after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: calc(var(--col-width) * 6 - var(--base-lheight));
+            height: 0.125rem;
+            background: $gray;
+
+            @include respond-md {
+                width: calc(var(--col-width) * 4 - var(--base-lheight));
+                height: 0.1875rem;
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 3 - var(--base-lheight));
+            }
+            }
+        }
+
+        p {
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+
+            @include respond-xl {
+            grid-column: 2 / span 6;
+            }
+        }
+
+        section {
+            // outline: 3px solid lime;
+            margin-top: calc(var(--base-lheight) + var(--half-lheight));
+            
+            @include respond-md {
+            grid-column: 1 / span 12;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 10;
+            }
+        }
+        }
+
+        /* || 4.7 Prepare Your Explanation */
+
+        .ss22_dbi__prepare {
+        header {
+            padding-bottom: 0;
+
+            @include respond-md {
+            margin-bottom: var(--half-lheight);
+            }
+
+            &:before {
+            background-color: $warm-gray1;
+            z-index: -2;
+            }
+
+            p {
+            margin: 0;
+            padding-top: var(--half-lheight);
+            padding-bottom: var(--half-lheight);
+
+            @include respond-md {
+                padding-bottom: var(--base-lheight);
+                padding-top: var(--base-lheight);
+            }
+            }
+        }
+
+        p,
+        h6,
+        ul {
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+
+            @include respond-xl {
+            grid-column: 2 / span 6;
+            }
+        }
+
+        & > ul {
+            li {
+            margin-top: var(--half-lheight);
+
+            &:before {
+                border: 0;
+                background: $theme1;
+            }
+            }
+        }
+
+        p {
+            &.source--dual-column {
+            @include respond-md {
+                columns: 1;
+            }
+            @include respond-lg {
+                columns: 2;
+                grid-column: 2 / span 10;
+            }
+            @include respond-xl {
+                grid-column: 2 / span 10;
+            }
+            }
+        }
+
+        h4 {
+            @extend %standard-head;
+            color: white;
+            margin-top: 0;
+            padding-bottom: var(--base-lheight);
+            padding-top: var(--base-lheight);
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.0625rem;
+
+            @include respond-md {
+            grid-column: 1 / span 12;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 8;
+            }
+
+            &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: calc(var(--gutter-width) * -1);
+            width: 100vw;
+            height: 100%;
+            z-index: -1;
+            background-color: $theme1;
+            background-image: linear-gradient(
+                to right,
+                $theme1 0%,
+                $theme1-gradient 100%
+            );
+
+            @include respond-md {
+                left: calc((var(--gutter-width) + var(--half-lheight)) * -1);
+            }
+
+            @include respond-lg {
+                left: calc(
+                (var(--gutter-width) + var(--half-lheight) + var(--col-width)) * -1
+                );
+            }
+            }
+        }
+
+        h6 {
+            font-weight: 700;
+        }
+
+        section {
+            margin-top: var(--base-lheight);
+            
+            @include respond-md {
+            grid-column: 1 / span 12;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 10;
+            }
+            
+            + h6 {
+                margin-top: calc(var(--base-lheight) + var(--quart-lheight));
+                
+                @include respond-md {
+                margin-top: calc(var(--base-lheight) + var(--half-lheight) + var(--quart-lheight));
+                }
+                
+                @include respond-lg {
+                margin-top: calc(var(--base-lheight) * 2);
+                }
+                
+            }
+        }
+
+        &.theme-2 {
+            h4 {
+            &:before {
+                background-color: $theme2;
+                background-image: linear-gradient(
+                to right,
+                $theme2 0%,
+                $theme2-gradient 100%
+                );
+            }
+            }
+
+            & > ul {
+            li {
+                &:before {
+                background: $theme2;
+                }
+            }
+            }
+        }
+
+        &.theme-3 {
+            h4 {
+            &:before {
+                background-color: $theme3;
+                background-image: linear-gradient(
+                to right,
+                $theme3 0%,
+                $theme3-gradient 100%
+                );
+            }
+            }
+
+            & > ul {
+            li {
+                &:before {
+                background: $theme3;
+                }
+            }
+            }
+        }
+
+        &.theme-4 {
+            h4 {
+            &:before {
+                background-color: $theme4;
+                background-image: linear-gradient(
+                to right,
+                $theme4 0%,
+                $theme4-gradient 100%
+                );
+            }
+            }
+
+            & > ul {
+            li {
+                &:before {
+                background: $theme4;
+                }
+            }
+            }
+        }
+
+        .source__accordion {
+            --icon-size: $icon-wrap-lv1;
+            --icon-bg: $icon-boxed-lv1;
+            
+
+            details {
+            position: relative;
+            &:before {
+                content: "";
+                top: 0;
+                left: 0;
+                width: 0.5rem;
+                height: 100%;
+                background: $gray;
+                position: absolute;
+                border-radius: 0.5rem 0 0 0.5rem;
+
+                @include respond-md {
+                width: 0.625rem;
+                border-radius: 0.625rem 0 0 0.625rem;
+                }
+            }
+
+            & > * {
+                padding-left: calc(var(--half-lheight) + 0.5rem);
+
+                @include respond-md {
+                padding-left: calc(var(--half-lheight) + 0.625rem);
+                }
+            }
+
+            summary {
+                padding-top: var(--quart-lheight);
+                padding-bottom: var(--quart-lheight);
+                background: white;
+                border-top: 0.125rem solid transparent;
+                border-right: 0.125rem solid transparent;
+
+                @include respond-md {
+                padding-top: var(--half-lheight);
+                padding-bottom: var(--half-lheight);
+                }
+
+                h5 {
+                @include para-size($body-sm);
+                font-weight: 700;
+                text-transform: uppercase;
+                }
+
+                strong {
+                font-family: "DIN", sans-seif;
+                @include head-size(10);
+                display: block;
+                text-transform: none;
+                color: black;
+                }
+
+                &:before {
+                background: color-code($gray-c5);
+                border: 0.125rem solid transparent;
+                }
+
+                & + * {
+                padding-top: var(--quart-lheight);
+
+                @include respond-md {
+                    padding-top: var(--half-lheight);
+                }
+                }
+            }
+
+            ul {
+                li {
+                &:before {
+                    background: $cool-gray2;
+                }
+                }
+            }
+
+            &[open] {
+                summary {
+                border-top: 0.125rem solid $gray;
+                border-right: 0.125rem solid $gray;
+
+                &:before {
+                    border: 0.125rem solid $gray;
+                }
+                }
+            }
+
+            & > *:last-child:not(summary) {
+                padding-bottom: var(--quart-lheight);
+
+                @include respond-md {
+                padding-bottom: var(--half-lheight);
+                }
+            }
+            }
+
+            li.green {
+            details {
+                &:before {
+                background: $secondary-green;
+                }
+
+                summary {
+                &:before {
+                    background: $background-green;
+                }
+
+                h5 {
+                    color: $secondary-green;
+                }
+                }
+
+                &[open] {
+                summary {
+                    border-top: 0.125rem solid $secondary-green;
+                    border-right: 0.125rem solid $secondary-green;
+
+                    &:before {
+                    border: 0.125rem solid $secondary-green;
+                    }
+                }
+                }
+            }
+            }
+            li.orange {
+            details {
+                &:before {
+                background: $theme4;
+                }
+
+                summary {
+                &:before {
+                    background: $secondary-orange;
+                }
+
+                h5 {
+                    color: $theme4;
+                }
+                }
+
+                &[open] {
+                summary {
+                    border-top: 0.125rem solid $theme4;
+                    border-right: 0.125rem solid $theme4;
+
+                    &:before {
+                    border: 0.125rem solid $theme4;
+                    }
+                }
+                }
+            }
+            }
+            li.cerise {
+            details {
+                &:before {
+                background: $theme2;
+                }
+
+                summary {
+                &:before {
+                    background: $secondary-cerise;
+                }
+
+                h5 {
+                    color: $theme2;
+                }
+                }
+
+                &[open] {
+                summary {
+                    border-top: 0.125rem solid $theme2;
+                    border-right: 0.125rem solid $theme2;
+
+                    &:before {
+                    border: 0.125rem solid $theme2;
+                    }
+                }
+                }
+            }
+            }
+            li.turquoise {
+            details {
+                &:before {
+                background: $theme3;
+                }
+
+                summary {
+                &:before {
+                    background: $secondary-turquoise;
+                }
+
+                h5 {
+                    color: $theme3;
+                }
+                }
+
+                &[open] {
+                summary {
+                    border-top: 0.125rem solid $theme3;
+                    border-right: 0.125rem solid $theme3;
+
+                    &:before {
+                    border: 0.125rem solid $theme3;
+                    }
+                }
+                }
+            }
+            }
+            li.purple {
+            details {
+                &:before {
+                background: $theme1;
+                }
+
+                summary {
+                &:before {
+                    background: $secondary-purple;
+                }
+
+                h5 {
+                    color: $theme1;
+                }
+                }
+
+                &[open] {
+                summary {
+                    border-top: 0.125rem solid $theme1;
+                    border-right: 0.125rem solid $theme1;
+
+                    &:before {
+                    border: 0.125rem solid $theme1;
+                    }
+                }
+                }
+            }
+            }
+        }
+
+        &.ss22_dbi__choices {
+            padding-bottom: 0;
+            header {
+            &:before {
+                height: var(--half-lheight);
+                background-color: $theme1;
+                background-image: linear-gradient(
+                to bottom,
+                $theme1 50%,
+                $theme1 50%,
+                $theme1-gradient 100%
+                );
+            }
+            }
+
+            h4 {
+            color: $cool-gray3;
+            padding-top: calc(var(--base-lheight) * 1.5);
+            padding-bottom: 0;
+            text-transform: uppercase;
+
+            @include respond-md {
+                padding-top: calc(var(--base-lheight) * 2);
+            }
+            &:before {
+                content: unset;
+            }
+            }
+
+            &.theme-2 {
+            header {
+                &:before {
+                background-color: $theme2;
+                background-image: linear-gradient(
+                    to bottom,
+                    $theme2 50%,
+                    $theme2 50%,
+                    $theme2-gradient 100%
+                );
+                }
+            }
+            }
+            &.theme-3 {
+            header {
+                &:before {
+                background-color: $theme3;
+                background-image: linear-gradient(
+                    to bottom,
+                    $theme3 50%,
+                    $theme3 50%,
+                    $theme3-gradient 100%
+                );
+                }
+            }
+            }
+            &.theme-4 {
+            header {
+                &:before {
+                background-color: $theme4;
+                background-image: linear-gradient(
+                    to bottom,
+                    $theme4 50%,
+                    $theme4 50%,
+                    $theme4-gradient 100%
+                );
+                }
+            }
+            }
+            &.background-image {
+            @include respond-md {
+                background-position: 25vw var(--half-lheight);
+            }
+
+            @include respond-lg {
+                background-position: 50vw var(--half-lheight);
+            }
+            }
+        }
+        }
+
+        /* || 4.8 Credits */
+
+        .ss22_dbi__credits {
+        h5 {
+            @include head-size($heading-sm);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $cool-gray3;
+        }
+
+        h5,
+        p {
+            @include respond-md {
+            grid-column: 1 / span 12;
+            }
+
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+
+            @include respond-xl {
+            grid-column: 2 / span 6;
+            }
+        }
+        }
+
+        /* || 4.9 Mini Inquiry Opener */
+
+        .ss22_dbi__mini-opener {
+        p,
+        h3 {
+            @include respond-md {
+            grid-column: 1 / span 10;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 6;
+            }
+        }
+
+        header {
+            p {
+            color: white;
+            @include head-size($heading-sm);
+            font-family: "Egyptian Slate", serif;
+            margin-top: 0;
+
+            @include respond-md {
+                grid-column: 1 / span 11;
+            }
+            @include respond-lg {
+                grid-column: 2 / span 7;
+            }
+
+            &:first-child {
+                font-family: "Source Sans Pro", sans-serif;
+                text-transform: uppercase;
+                font-weight: 700;
+                @include head-size($heading-sm);
+                padding: var(--base-lheight) var(--half-lheight) var(--quart-lheight)
+                var(--half-lheight);
+                position: relative;
+                background: $secondary-green;
+                border-radius: 0 0 0.625rem 0.625rem;
+                width: fit-content;
+                box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2),
+                0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+            }
+            }
+
+            &:before {
+            background-color: $theme1;
+            background-image: linear-gradient(
+                to bottom,
+                $theme1 50%,
+                $theme1 50%,
+                $theme1-gradient 100%
+            );
+            }
+
+            &:after {
+            position: absolute;
+            width: 75vw;
+            height: 100%;
+            background-image: url("images/magnifier-white.svg");
+            background-size: cover;
+            background-position: left top;
+            top: 0;
+            left: 25vw;
+            opacity: 0.15;
+
+            @include respond-md {
+                content: "";
+            }
+
+            @include respond-lg {
+                width: 50vw;
+                left: calc(50vw - var(--col-width) + var(--quart-lheight));
+            }
+
+            @include respond-xl {
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: calc(100% + var(--base-lheight) * 3);
+                left: calc(50vw - var(--base-lheight) * -1);
+            }
+            }
+
+            & + p {
+            margin-top: var(--base-lheight);
+            }
+        }
+
+        h1 {
+            margin-top: var(--half-lheight);
+            text-transform: unset;
+            padding-bottom: calc(var(--base-lheight) + var(--quart-lheight));
+            position: relative;
+
+            @include respond-md {
+            padding-bottom: calc(var(--base-lheight) + var(--half-lheight));
+            grid-column: 1 / span 11;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+
+            &:before {
+                bottom: 0;
+                left: 0;
+                width: calc(var(--col-width) * 6);
+                height: 0.25rem;
+                background: white;
+                position: absolute;
+                content: "";
+
+                @include respond-md {
+                    width: calc(var(--col-width) * 4 - var(--base-lheight));
+                    height: 0.3125rem;
+                }
+
+                @include respond-lg {
+                    width: calc(var(--col-width) * 3 - var(--base-lheight));
+                }
+            }
+        }
+
+        h2 {
+            color: white;
+            @include head-size($body-lg);
+            margin-top: calc(var(--base-lheight) + var(--quart-lheight));
+
+            @include respond-md {
+            margin-top: calc(var(--base-lheight) + var(--half-lheight));
+            grid-column: 1 / span 11;
+            }
+            @include respond-lg {
+            grid-column: 2 / span 7;
+            }
+        }
+
+        h3 {
+            @extend %section-page;
+            padding-bottom: var(--base-lheight);
+            margin-bottom: var(--half-lheight);
+            position: relative;
+            color: black;
+
+            @include respond-md {
+            padding-bottom: calc(var(--base-lheight) + var(--quart-lheight));
+            margin-bottom: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+
+            &:before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: calc(var(--col-width) * 6);
+            height: 0.25rem;
+            background: $theme1;
+
+            @include respond-md {
+                width: calc(var(--col-width) * 4 - var(--base-lheight));
+                height: 0.3125rem;
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 3 - var(--base-lheight));
+            }
+            }
+        }
+
+        &.theme-2 {
+            header {
+            &:before {
+                background-color: $theme2;
+                background-image: linear-gradient(
+                to bottom,
+                $theme2 50%,
+                $theme2 50%,
+                $theme2-gradient 100%
+                );
+            }
+            }
+            h3 {
+            &:before {
+                background: $theme2;
+            }
+            }
+        }
+        &.theme-3 {
+            header {
+            &:before {
+                background-color: $theme3;
+                background-image: linear-gradient(
+                to bottom,
+                $theme3 50%,
+                $theme3 50%,
+                $theme3-gradient 100%
+                );
+            }
+            }
+            h3 {
+            &:before {
+                background: $theme3;
+            }
+            }
+        }
+        &.theme-4 {
+            header {
+            &:before {
+                background-color: $theme4;
+                background-image: linear-gradient(
+                to bottom,
+                $theme4 50%,
+                $theme4 50%,
+                $theme4-gradient 100%
+                );
+            }
+            }
+            h3 {
+            &:before {
+                background: $theme4;
+            }
+            }
+        }
+    }
+
+
+    .free-text-question,
+    .free-text-question-table,
+    .image-gallery {
+        margin-top: var(--base-lheight);
+    }
+
+    /* || 5.0 Storybook Components */
+
+    /* || 5.1 Headers */
+
+
+    h1 {
+        background-color: #A733FF;
+        margin-top: var(--half-lheight);
+        text-transform: unset;
+        padding-bottom: calc(var(--base-lheight) + var(--quart-lheight));
+        position: relative;
+
+        @include respond-md {
+        padding-bottom: calc(var(--base-lheight) + var(--half-lheight));
+        grid-column: 1 / span 11;
+        }
+        @include respond-lg {
+        grid-column: 2 / span 7;
+        }
+
+        &:before {
+            bottom: 0;
+            left: 0;
+            width: calc(var(--col-width) * 6);
+            height: 0.25rem;
+            background: white;
+            position: absolute;
+            content: "";
+
+            @include respond-md {
+                width: calc(var(--col-width) * 4 - var(--base-lheight));
+                height: 0.3125rem;
+            }
+
+            @include respond-lg {
+                width: calc(var(--col-width) * 3 - var(--base-lheight));
+            }
+        }
+
+        html & {
+            background-color: #A733FF;
+        }
+    }
+
+
+
+    h2 {
+        margin-top: 0;
+        padding-bottom: var(--base-lheight);
+        position: relative;
+        @include source__icon--lg--unboxed;
+        @include source__icon--top-left;
+
+        @include respond-md {
+        padding-top: calc(
+            var(--half-lheight) + var(--base-lheight) + var(--icon-wrap)
+        );
+        grid-column: 1 / 13;
+        }
+
+        @include respond-lg {
+        padding-top: 0;
+        grid-column: 3 / span 9;
+        }
+
+        &:before {
+        background-image: url(images/question-icon.svg);
+        @include respond-lg {
+            content: unset;
+        }
+        }
+
+        &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(var(--col-width) * 5);
+        height: 0.25rem;
+        background: white;
+
+        @include respond-md {
+            width: calc(var(--col-width) * 4 - var(--base-lheight));
+            height: 0.375rem;
+        }
+
+        @include respond-lg {
+            width: calc(var(--col-width) * 3 - var(--base-lheight));
+            height: 0.5rem;
+        }
+        }
+    }
+
+
+    h3 {
+        @extend %section-page;
+        position: relative;
+        margin-top: calc(var(--base-lheight) + var(--quart-lheight));
+        @include padding-below(1);
+        color: black;
+
+        @include respond-md {
+        margin-top: calc(var(--base-lheight) + var(--half-lheight));
+        @include padding-below(1.5);
+        grid-column: 1 / span 10;
+        }
+        @include respond-lg {
+            grid-column: 2 / span 6;
+        }
+        
+        @include respond-xl {
+        margin-top: calc(var(--base-lheight) + var(--half-lheight) + var(--quart-lheight));
+        }
+
+        &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(var(--col-width) * 6);
+        height: 0.25rem;
+        background: $theme1;
+        content: "";
+
+        @include respond-md {
+            width: calc(var(--col-width) * 5 - var(--base-lheight));
+            height: 0.375rem;
+        }
+
+        @include respond-lg {
+            width: calc(var(--col-width) * 3 - var(--base-lheight));
+            height: 0.5rem;
+        }
+        }
+    }
+
+
+
+    h4 {
+        @extend %standard-head;
+        text-transform: uppercase;
+        @include source__icon--md--unboxed;
+        @include source__icon--top-left;
+        padding-bottom: var(--base-lheight);
+        margin-top: var(--base-lheight);
+
+        @include respond-md {
+        grid-column: 1 / span 12;
+        padding-top: var(--base-lheight);
+        margin-top: 0;
+        @include source__icon--internal--left-center;
+        }
+        @include respond-lg {
+        grid-column: 2 / span 7;
+        padding-left: 0;
+        @include source__icon--external--left-center;
+        }
+
+        &:before {
+        background-image: url("images/notebook_icon-32.svg");
+        }
+
+        &:after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: calc(var(--col-width) * 6 - var(--base-lheight));
+        height: 0.125rem;
+        background: $gray;
+
+        @include respond-md {
+            width: calc(var(--col-width) * 4 - var(--base-lheight));
+            height: 0.1875rem;
+        }
+
+        @include respond-lg {
+            width: calc(var(--col-width) * 3 - var(--base-lheight));
+        }
+        }
+    }
+
+    h5 {
+        @include head-size($body-sm);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: black;
+        @include source__icon--md--unboxed;
+        @include source-_icon--internal--left-top;
+
+        @include respond-md {
+        @include source-_icon--internal--left-center;
+        @include source__icon--sm--unboxed;
+        }
+        &:before {
+        border-radius: 50%;
+        border: 0.125rem solid $warm-gray2;
+        counter-increment: orderedlist;
+        content: counter(orderedlist);
+        color: $warm-gray2;
+        font-family: "DIN";
+        @include head-size(10);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond-md {
+            border-width: 0.1875rem;
+        }
+
+        @include respond-lg {
+            border-width: 0.25rem;
+        }
+        }
+
+        strong {
+        @include head-size(10);
+        display: block;
+        font-family: "DIN";
+        }
+    }
+
+    h6 {
+        @include head-size($body-sm);
+        text-transform: uppercase;
+        color: $secondary-blue;
+        font-weight: 700;
+        @include source__icon--xs;
+        @include source__icon--internal--left-center;
+        padding-top: var(--half-lheight);
+        padding-bottom: var(--half-lheight);
+        padding-left: calc(var(--icon-wrap) + var(--quart-lheight));
+
+        @include respond-md {
+            padding-top: var(--quart-lheight);
+            padding-bottom: var(--quart-lheight);
+        }
+
+        @include respond-xl {
+            padding-top: 0;
+            @include source__icon--sm;
+            @include source__icon--panel--border-left-center;
+            padding-left: calc((var(--half-lheight) + var(--icon-wrap)) / 2);
+        }
+    }
+
+    /* || 5.2 Blockquote */
+    
+    .block-quote {
+        background: $buff;
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+        padding: var(--half-lheight);
+        counter-reset: paraNumber;
+        margin-top: var(--base-lheight);
+        
+        &.no-aside {
+            @include respond-xl { 
+                grid-column: 2 / span 8;
+                p {
+                    grid-column: 1 / span 9;
+                }
+            }
+        }
+        
+        @include respond-md {
+            grid-column: 1 / span 12;
+        }
+
+        @include respond-lg {
+            grid-column: 2 / span 10;
+            display: grid;
+            grid-template-columns:
+            calc((100% + var(--base-lheight)) / 10 - var(--half-lheight))
+            repeat(8, 1fr) calc((100% + var(--base-lheight)) / 10 -
+                var(--half-lheight));
+        }
+
+        blockquote {
+            border: 0;
+            padding-left: 0;
+
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            display: grid;
+            grid-template-columns:
+                calc((100% + 2 * var(--base-lheight)) / 10 - var(--base-lheight))
+                repeat(8, 1fr) calc((100% + 2 * var(--base-lheight)) / 10 -
+                    var(--base-lheight));
+            }
+            p {
+            @include respond-lg {
+                grid-column: 1 / span 10;
+            }
+            @include respond-xl {
+                grid-column: 1 / span 7;
+            }
+            }
+
+            & > p {
+            @include para-size($body-lg);
+            font-family: "Egyptian Slate", serif;
+
+            @include respond-md {
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+                text-indent: calc((var(--half-lheight) + var(--quart-lheight)) * -1);
+            }
+
+            @include respond-xl {
+                padding-right: var(--base-lheight);
+            }
+
+            &:before {
+                counter-increment: paraNumber;
+                content: counter(paraNumber);
+                width: calc(var(--half-lheight) + var(--quart-lheight));
+                text-indent: 0;
+                @include para-size($body-sm);
+                font-family: "Source Sans Pro", sans-serif;
+                font-weight: 700;
+                display: block;
+
+                @include respond-md {
+                display: inline-block;
+                line-height: 0;
+                }
+            }   
+            }
+            
+            .uncounted {
+            @include respond-md {
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+                text-indent: 0;
+            }
+
+            &:before {
+                counter-increment: unset;
+                content: unset;
+            }
+            }
+
+            .sans-serif {
+            font-family: "Source Sans Pro", sans-serif;
+            } 
+        }
+
+        aside {
+            padding: 0;
+            background: unset;
+
+            @include respond-md {
+            padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            padding-right: var(--half-lheight);
+            }
+
+            @include respond-xl {
+            grid-column: span 3 / -1;
+            padding-left: 0;
+            padding-right: 0;
+            }
+
+            h6 {
+            @include head-size($body-sm);
+            text-transform: uppercase;
+            color: $secondary-blue;
+            font-weight: 700;
+            @include source__icon--xs;
+            @include source__icon--internal--left-center;
+            padding-top: var(--half-lheight);
+            padding-bottom: var(--half-lheight);
+            padding-left: calc(var(--icon-wrap) + var(--quart-lheight));
+
+            @include respond-md {
+                padding-top: var(--quart-lheight);
+                padding-bottom: var(--quart-lheight);
+            }
+
+            @include respond-xl {
+                padding-top: 0;
+                @include source__icon--sm;
+                @include source__icon--panel--border-left-center;
+                padding-left: calc((var(--half-lheight) + var(--icon-wrap)) / 2);
+            }
+
+            &:before {
+                background-color: $theme1;
+                border-radius: 50%;
+                background-image: url("images/annotation-icon.svg");
+            }
+
+            &:after {
+                height: 0.125rem;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                content: "";
+                position: absolute;
+                background: $theme1;
+
+                @include respond-md {
+                left: calc(var(--icon-wrap) + var(--quart-lheight));
+                }
+                @include respond-xl {
+                left: calc(var(--icon-wrap) / 2 + var(--quart-lheight));
+                right: calc(var(--half-lheight) * -1);
+                height: 0.1875rem;
+                }
+            }
+            }
+            p {
+            @include para-size($caption);
+            color: $cool-gray3;
+
+            &:first-of-type {
+                margin-top: var(--quart-lheight);
+            }
+            }
+        }
+
+        figcaption {
+            @include respond-md {
+            padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+
+            @include respond-lg {
+            grid-column: 1 / span 10;
+            padding-right: var(--half-lheight);
+            }
+
+            @include respond-xl {
+            grid-column: 1 / span 7;
+            }
+
+            p {
+            @include para-size($body-md);
+
+            &:first-child {
+                @include para-size($body-lg);
+
+                + p {
+                margin-top: 0;
+                }
+            }
+            }
+        }
+        
+        cite {
+            font-style: italic;
+        }
+        
+        > p {
+            padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            
+            @include respond-md {
+                width: calc(var(--col-width) * 10 - var(--base-lheight));
+                grid-column: 1 / span 10;
+                padding-left: calc(var(--half-lheight) + var(--quart-lheight));
+            }
+            
+            // Added the code above in the md breakpoint, 
+            // noticed this code also here unsure what the desired affect is
+            @include respond-md {
+                width: calc(var(--col-width) * 7 - var(--base-lheight));
+            }
+            
+            &:first-of-type {
+                @include para-size($body-lg);
+            }
+
+            &:not(:first-of-type) {
+                margin-top: 0;
+            }
+        }
+
+        &--gray {
+            background: $cool-gray1;
+        }
+
+        + section,
+        + .free-text-question {
+            margin-top: var(--base-lheight);
+        }
+    }
+}
