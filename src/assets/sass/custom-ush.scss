@@ -442,7 +442,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                     border-color: $primary-blue;
                     text-indent: 0;
 
-                    &:first-child {
+                    &:first-of-type {
                         border-left: .125rem solid $primary-blue;
                     }
                     
@@ -450,7 +450,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                         border-right: .125rem solid $primary-blue;
                     }
                     
-                    *:first-child {
+                    *:first-of-type {
                         margin-top: 0;
                     }
                 }
@@ -464,7 +464,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                         background-color: $primary-blue;
                         border-left: 0.0625rem solid white; 
                         border-right: 0.0625rem solid white;
-                        &:first-child {
+                        &:first-of-type {
                             border-left: 0.125rem solid $primary-blue;
                         }
                         &:last-child {
@@ -482,7 +482,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                         td, th {
                             border-top-width: .125rem;
                             
-                            &:first-child {
+                            &:first-of-type {
                                 border-top-left-radius: .625rem;
                             }
                             &:last-child {
@@ -495,7 +495,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                         td, th {
                             border-bottom-width: .125rem;
                             
-                            &:first-child {
+                            &:first-of-type {
                                 border-bottom-left-radius: .625rem;
                             }
                             &:last-child {
@@ -526,7 +526,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                     background: $background-blue;
                 }
                 
-                &:not(:first-child) {
+                &:not(:first-of-type) {
                     border-top: .125rem solid $primary-blue;
                     margin-top: var(--half-lheight);
                 }
@@ -1422,7 +1422,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                     }
                 }
                 
-                &:not(:first-child) {
+                &:not(:first-of-type) {
                     margin-top: var(--base-lheight);
                     
                     @include respond-lg {
@@ -1589,7 +1589,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                 //     padding: 0 var(--base-lheight);
                 // }
                 
-                &:not(:first-child) {
+                &:not(:first-of-type) {
                     @include respond-lg {
                         padding-left: var(--base-lheight);
                     }
@@ -1606,7 +1606,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                     //     padding-left: calc(var(--base-lheight) + var(--icon-wrap));
                     // }
                     
-                    &:not(:first-child) {
+                    &:not(:first-of-type) {
                         @include respond-lg {
                             padding-left: calc(var(--base-lheight) + var(--icon-wrap));
                         }
@@ -2629,7 +2629,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
             
             > li {
                 margin-top: var(--half-lheight);
-                &:first-child {
+                &:first-of-type {
                     margin-top: 0;
                 }
             }
@@ -2687,7 +2687,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                     @include source__icon--md--unboxed;
                 }
                 
-                &:first-child {
+                &:first-of-type {
                     margin-top: var(--base-lheight);
                     @include respond-md {
                         margin-top: calc(var(--base-lheight) * 2);
@@ -2727,7 +2727,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                 grid-column: 2 / span 10;
             }
             
-            &:first-child {
+            &:first-of-type {
                 @include respond-md {
                     margin-top: calc(var(--base-lheight) * -1);
                 }
@@ -2905,7 +2905,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                 margin-top: var(--base-lheight);
                 @include para-size($body-lg);
                 
-                &:first-child {
+                &:first-of-type {
                     text-transform: uppercase;
                     @include head-size($body-sm);
                     font-weight: 700;
@@ -2952,7 +2952,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                     @include respond-xl {
                         flex-basis: 50%;
                     }                
-                    &:first-child {
+                    &:first-of-type {
                         border-radius: .625rem .625rem 0 0;
 
                         @include respond-md {
@@ -3453,7 +3453,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                 }
                 
                 li {
-                    &:first-child {
+                    &:first-of-type {
                         margin-top: 0;
                     }
                 }
@@ -3956,7 +3956,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
 
         /* style the "anchor tags" these are the first and last items in parent list */
         li:not(li li) {
-        &:first-child,
+        &:first-of-type,
         &:last-child {
             align-items: center;
             background-color: $gray-light;
@@ -3973,11 +3973,11 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
             }
         }
 
-        &:first-child {
+        &:first-of-type {
             margin-bottom: $timeline-anchor-h;
         }
 
-        &:not(:first-child):not(:last-child) {
+        &:not(:first-of-type):not(:last-child) {
             margin-bottom: $margin-bottom-spacer-large;
             padding-left: var(--gutter-width);
 
@@ -4027,7 +4027,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
         grid-column: 1 / 12;
 
         li:not(li li) {
-            &:not(:first-child):not(:last-child) {
+            &:not(:first-of-type):not(:last-child) {
             padding-left: calc(var(--gutter-width) + var(--col-width) + 0.625rem);
 
             h4 {
@@ -4053,7 +4053,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
             grid-column: 2 / 13;
             
         li:not(li li) {
-            &:not(:first-child):not(:last-child) {
+            &:not(:first-of-type):not(:last-child) {
             
             padding-left: var(--gutter-width);
 
@@ -4089,7 +4089,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
             grid-column: 1 / -1;
 
             &:not(li li) {
-            &:first-child,
+            &:first-of-type,
             &:last-child {
                 align-items: center;
                 border-radius: $radius;
@@ -4100,7 +4100,7 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
                 width: $width;
             }
 
-            &:not(:first-child):not(:last-child) {
+            &:not(:first-of-type):not(:last-child) {
                 padding-left: 0;
 
                 &:nth-last-child(2) {
@@ -4126,12 +4126,12 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
             li {
                 margin-bottom: $timeline-anchor-h;
 
-                &:not(:first-child) {
+                &:not(:first-of-type) {
                 align-self: flex-end;
                 }
 
                 li {
-                &:not(:first-child) {
+                &:not(:first-of-type) {
                     align-self: flex-start;
                 }
 
@@ -5181,8 +5181,8 @@ src: url('fonts/egyptianslateblackitalic.woff2') format('woff2'),
     }
 
     /* || 5.1 Headers */
-    
-    figure {
+
+    figure.breakout-quote {
         position: relative;
         color: $primary-blue;
         font-weight: 600;

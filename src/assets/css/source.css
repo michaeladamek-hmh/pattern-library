@@ -1122,7 +1122,7 @@ aside p {
     line-height: 1.875rem;
   }
 }
-aside *:first-child {
+aside *:first-of-type {
   margin-top: 0;
 }
 
@@ -1194,7 +1194,7 @@ article * {
   margin-left: 0;
   margin-right: 0;
 }
-article *:first-child {
+article *:first-of-type {
   margin-top: 0;
 }
 
@@ -1354,8 +1354,8 @@ table th {
   text-indent: calc(var(--base-lheight) / -4);
   vertical-align: text-top;
 }
-table td:first-child,
-table th:first-child {
+table td:first-of-type,
+table th:first-of-type {
   border-left: 0;
 }
 table td:last-child,
@@ -1428,11 +1428,11 @@ td {
   td:nth-child(5)::before {
       content: "ISBN-10: ";
   } */
-  td:not(:first-child):not(:last-child) {
+  td:not(:first-of-type):not(:last-child) {
     border-top: 0;
     border-bottom: 0;
   }
-  td:first-child {
+  td:first-of-type {
     border-bottom: 0;
   }
   td:last-child {
@@ -2094,7 +2094,7 @@ iframe {
   margin: 0 var(--half-lheight);
   grid-column: 1;
 }
-.source__flipcards .source__flipcards__back > *:first-child {
+.source__flipcards .source__flipcards__back > *:first-of-type {
   margin-top: var(--half-lheight);
 }
 .source__flipcards--four li {
@@ -2205,8 +2205,8 @@ iframe {
 .source__flipcards .source__flipcards__back--image--edge figure {
   height: var(--flipcard-height);
 }
-.source__flipcards .source__flipcards__front--image--edge figure:first-child, .source__flipcards .source__flipcards__front--image--edge figure:last-child,
-.source__flipcards .source__flipcards__back--image--edge figure:first-child,
+.source__flipcards .source__flipcards__front--image--edge figure:first-of-type, .source__flipcards .source__flipcards__front--image--edge figure:last-child,
+.source__flipcards .source__flipcards__back--image--edge figure:first-of-type,
 .source__flipcards .source__flipcards__back--image--edge figure:last-child {
   margin: 0;
 }

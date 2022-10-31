@@ -387,7 +387,7 @@ p.quill-source-editor {
       border-right: 2px solid $grid-gray;
       color: black;
 
-      &:first-child {
+      &:first-of-type {
         border-radius: 10px 10px 0 0;
         border-top: 2px solid $grid-gray;
       }
@@ -402,7 +402,7 @@ p.quill-source-editor {
     }
 
     .anatomy-stem {
-      &:not(:first-child) {
+      &:not(:first-of-type) {
         padding-top: 0;
       }
     }
@@ -481,7 +481,7 @@ p.quill-source-editor {
     p {
       padding-right: 47px;
 
-      &:first-child {
+      &:first-of-type {
         margin-top: 0;
         padding-top: 10px;
       }
@@ -849,7 +849,7 @@ p.quill-source-editor {
         }
       }
 
-      tbody:first-child {
+      tbody:first-of-type {
         tr:first-of-type {
           td {
             border-top: 2px solid $grid-gray;
@@ -930,7 +930,7 @@ p.quill-source-editor {
     thead + tbody,
     &[data-has-header="true"] tbody {
       tr {
-        &:first-child {
+        &:first-of-type {
           td {
             border-top: 2px solid $grid-gray;
 
@@ -1033,7 +1033,7 @@ p.quill-source-editor {
 
   [data-has-header="true"] {
     tr {
-      &:first-child {
+      &:first-of-type {
         &::before {
           border-radius: 10px 10px 0 0;
         }
