@@ -26,9 +26,9 @@ List.propTypes = {
     grade: PropTypes.oneOf(['gradek', 'grade1', 'grade23', 'grade45', 'grade68', 'grade912']),
 };
   
-List.defaultProps = {
-    listType: 'unordered',
-    grade: 'grade68',
-};
+// List.defaultProps = {
+//     listType: 'unordered',
+//     grade: 'grade68',
+// };
 
 export default List;

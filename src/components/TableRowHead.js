@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 
-function ListItem({ item: { text }, grade }) {
+function TableRowHead({ headerRowCell: { text }, grade }) {
     return (
-        <li>{ text }</li>
-    );
+        <th scope="row">{ text }</th>
+    )
 }
 
-ListItem.propTypes = {
-    item: PropTypes.shape ({
+TableRowHead.propTypes = {
+    headerRowCell: PropTypes.shape ({
         id: PropTypes.string,
         text: PropTypes.string,
     }),
     grade: PropTypes.oneOf(['gradek', 'grade1', 'grade23', 'grade45', 'grade68', 'grade912']),
 };
   
-// ListItem.defaultProps = {
+// TableCell.defaultProps = {
 //     text: `This is a list item placeholder text.`,
 //     grade: 'grade68',
 // };
 
-export default ListItem;
+export default TableRowHead;
