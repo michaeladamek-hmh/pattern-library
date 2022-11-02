@@ -1,0 +1,376 @@
+
+//--------------------------------------------------------------------
+// Settings
+// 
+// Use this partial to store commonly used variables, such as fonts
+// and colors. Variables defined in this file are used in the baseline
+// patterns and mixins. Do NOT add any CSS to this file, only variables.
+//--------------------------------------------------------------------
+
+//--------------------------------------------------------------------
+// BREAKPOINTS 
+//--------------------------------------------------------------------
+// Breapoints
+// By default, breakpoints assume min-width. So the breakpoint value should
+// be the smallest point at which the styles should take effect.
+
+$bp-xsmall:                         320px !default;
+$bp-small:                      	480px !default;
+$bp-medium:                       	650px !default;
+$bp-large:                      	880px !default;
+$bp-xlarge:                      	1280px !default;
+
+//--------------------------------------------------------------------
+// Font family stacks 
+//--------------------------------------------------------------------
+// These variables make
+$font-sans:                     "Source Sans Pro", Helvetica, Verdana, sans;
+$font-serif:                    "Tinos", Times New Roman, serif;
+$font-mono:                     Courier, "Courier New", monospace;
+
+// The fonts for body text and headings are stored here 
+$body-font-family:              $font-sans;
+$heading-font-family:           $font-sans;
+
+ 
+//--------------------------------------------------------------------
+// BASE FONT SIZES
+//--------------------------------------------------------------------
+// The $base-font-size is defined in pixels. This is used on the HTML selector to replace the default 16px size. 
+// All other type values in the system are then rem based to be relative to the $base-font-size.
+// To change the font size for a program, change the $base-font-size and $base-font-size-small px values as required.
+//--------------------------------------------------------------------
+$base-font-size:                22px; // The font size for body text.
+$base-font-size-small:          19.2px; // The font size for body text on smaller
+$interaction-base-font-size:    0.9rem; // The font size for body text.
+
+// Other variables referencing size from $base-font-size
+$font-size-large:               $base-font-size;
+$font-size-small:               $base-font-size-small;
+$dropcap-font-size:             5.6em; // DROPCAPS
+
+//--------------------------------------------------------------------
+// DSS TYPE LEVELS 
+//--------------------------------------------------------------------
+// Each Level = specific responsive values for type-size, line-height & padding responsive values. 
+// Set in rem to be relative to the HTML font-sze (set via $base-font-size & $base-font-size-small)
+//--------------------------------------------------------------------
+
+// 1) HIERARCHY 
+// The ratio of type sizes is closer together on small viewports, and more spread on wider viewports. 
+// Font-size for L1-L4 are responsive with two values each, the default and 'small'. 
+// 'Small' operates for viewports 0 to 879px. Default operates from 880px+ 
+// Font-size for L5-L9 have one value each. 
+$L1-size:                       2.9rem;
+$L1-size-small:                 2.1rem;
+$L2-size:                       2.2rem;
+$L2-size-small:                 1.7rem;
+$L3-size:                       1.7rem;
+$L3-size-small:                 1.4rem;
+$L4-size:                       1.3rem;
+$L4-size-small:                 1.2rem;
+$L5-size:                       1rem;
+$L6-size:                       0.9rem;
+$L7-size:                       0.8rem;
+$L8-size:                       0.7rem;
+$L9-size:                       0.6rem;
+
+// 2) LINE HEIGHT(Leading)
+// The bigger the font-size, the smaller the line height.
+$L1-line-height:                1.15;
+$L2-line-height:                1.25;
+$L3-line-height:                1.3;
+$L4-line-height:                1.35;
+$base-line-height:              1.5; /* L5 to L9 use base-line-height */
+$large-line-height:             1.8; /* Used when UI items need to be places between lines. eg Select Interaction */
+
+// 3) PADDING
+// Issues with HTML's rendering of type result in varying spaces that cause layout issues. Until a better solution is found, we have fixed this issue by adding padding to each type size. The padding is responsive. 
+$L1-padding:                    0 0 0.14rem 0; /* same across all viewport widths */
+$L2-padding-small:              0 0 0.09rem 0;
+$L2-padding-medium:             0 0 0.2rem 0;
+$L2-padding-large:              0.09rem 0 0.17rem 0;
+$L3-padding-small:              0.04rem 0 0.18rem 0;
+$L3-padding-medium:             0.04rem 0 0.25rem 0;
+$L3-padding-large:              0.20rem 0 0.25rem 0;
+$L4-padding-small:              0.09rem 0 0.22rem 0;
+$L4-padding-medium:             0.09rem 0 0.28rem 0;
+$L4-padding-large:              0.32rem 0 0.36rem 0;
+$L5-padding-small:              0.09rem 0 0.22rem 0;
+$L5-padding-medium:             0.09rem 0 0.25rem 0;
+$L5-padding-large:              0.34rem 0;
+$L6-padding-small:              0.14rem 0 0.22rem 0;
+$L6-padding-medium:             0.14rem 0 0.25rem 0;
+$L6-padding-large:              0.4rem 0;
+$L7-padding-small:              0.15rem 0 0.26rem 0;
+$L7-padding-medium:             0.2rem 0 0.3rem 0;
+$L7-padding-large:              0.45rem 0;
+$L8-padding-small:              0.26rem 0;
+$L8-padding-medium:             0.2rem 0 0.35rem 0;
+$L8-padding-large:              0.45rem 0 0.52rem 0;
+$L9-padding-small:              0.3rem 0 0.32rem 0;
+$L9-padding-medium:             0.25rem 0 0.45rem 0;
+$L9-padding-large:              0.55rem 0 0.55rem 0;
+
+// TYPE MAP
+// The type map is used to generate the 'Type size and padding' mixins within _mixins.scss 
+$type-map: (
+    L1-size-small:                  $L1-size-small,
+    L1-size:                        $L1-size,
+    L2-size-small:                  $L2-size-small,
+    L2-size:                        $L2-size,
+    L3-size-small:                  $L3-size-small,
+    L3-size:                        $L3-size,
+    L4-size-small:                  $L4-size-small,
+    L4-size:                        $L4-size,
+    L5-size:                        $L5-size,
+    L5-size-small:                  $L5-size,
+    L6-size:                        $L6-size,
+    L6-size-small:                  $L6-size,
+    L7-size:                        $L7-size,
+    L7-size-small:                  $L7-size,
+    L8-size:                        $L8-size,
+    L8-size-small:                  $L8-size,
+    L9-size:                        $L9-size,
+    L9-size-small:                  $L9-size,
+    L1-line-height:                 $L1-line-height,
+    L2-line-height:                 $L2-line-height,
+    L3-line-height:                 $L3-line-height,
+    L4-line-height:                 $L4-line-height,
+    L5-line-height:                 $base-line-height,
+    L6-line-height:                 $base-line-height,
+    L7-line-height:                 $base-line-height,
+    L8-line-height:                 $base-line-height,
+    L9-line-height:                 $base-line-height,
+    L1-padding-small:               $L1-padding,
+    L1-padding-medium:              $L1-padding,
+    L1-padding-large:               $L1-padding,
+    L2-padding-small:               $L2-padding-small,
+    L2-padding-medium:              $L2-padding-medium,
+    L2-padding-large:               $L2-padding-large,
+    L3-padding-small:               $L3-padding-small,
+    L3-padding-medium:              $L3-padding-medium,
+    L3-padding-large:               $L3-padding-large,
+    L4-padding-small:               $L4-padding-small,
+    L4-padding-medium:              $L4-padding-medium,
+    L4-padding-large:               $L4-padding-large,
+    L5-padding-small:               $L5-padding-small,
+    L5-padding-medium:              $L5-padding-medium,
+    L5-padding-large:               $L5-padding-large,
+    L6-padding-small:               $L6-padding-small,
+    L6-padding-medium:              $L6-padding-medium,
+    L6-padding-large:               $L6-padding-large,
+    L7-padding-small:               $L7-padding-small,
+    L7-padding-medium:              $L7-padding-medium,
+    L7-padding-large:               $L7-padding-large,
+    L8-padding-small:               $L8-padding-small,
+    L8-padding-medium:              $L8-padding-medium,
+    L8-padding-large:               $L8-padding-large,
+    L9-padding-small:               $L9-padding-small,
+    L9-padding-medium:              $L9-padding-medium,
+    L9-padding-large:               $L9-padding-large
+);
+
+
+//--------------------------------------------------------------------
+// DSS SPACING VALUES
+//--------------------------------------------------------------------
+// These are standard DSS sizes of spacing between items on page. 
+// Text space Vs Object space: Due to padding needed on the Type Levels to correct HTML rendering issues (See DSS TYPE LEVELS: Padding (above)), all other non-type objects require an equalizing value of margin applied to balance this. Therefore we have two different types of spacing to accommodate this - text spacing, and object spacing. 
+
+// TOP SPACES -------------------------------
+// In the majority cases, spacing is applied above the item. Spacing is applied to margin.
+
+/* TOP SPACE EQUALIZE */
+/* Text */
+$text-top-space-equalize:        		0rem 0rem 0rem 0rem; /* all screen ranges */
+/* Object */
+$object-top-space-equalize: 			0.47rem 0rem 0.63rem 0rem; 
+$object-top-space-equalize-bp-lg:     	0.7rem 0rem 0.7rem 0rem; 
+
+/* TOP SPACE REGULAR */
+/* Text */
+$text-top-space-regular:    			0.4545rem 0rem 0rem 0rem; /* all screen ranges */
+/* Object */
+$object-top-space-regular: 				0.8745rem 0rem 0.63rem 0rem; 
+$object-top-space-regular-bp-md: 		0.8645rem 0rem 0.59rem 0rem;
+$object-top-space-regular-bp-lg:		1.1355rem 0rem 0.681rem 0rem;
+
+/* TOP SPACE MEDIUM */
+/* Text */
+$text-top-space-medium:    				1.1818rem 0rem 0rem 0rem; 
+$text-top-space-medium-bp-lg:    		1.3636rem 0rem 0rem 0rem; 
+/* Object */
+$object-top-space-medium: 				1.6018rem 0rem 0.63rem 0rem;
+$object-top-space-medium-bp-md: 		1.5918rem 0rem 0.59rem 0rem;
+$object-top-space-medium-bp-lg:			2.0446rem 0rem 0.681rem 0rem;
+
+/* TOP SPACE LARGE */
+/* Text */
+$text-top-space-large:    				1.9091rem 0rem 0rem 0rem; 
+$text-top-space-large-bp-lg:    		2.4091rem 0rem 0rem 0rem; 
+/* Object */
+$object-top-space-large: 				2.321rem 0rem 0.63rem 0rem;
+$object-top-space-large-bp-md: 			2.321rem 0rem 0.59rem 0rem;
+$object-top-space-large-bp-lg:			3.0901rem 0rem 0.681rem 0rem;
+
+
+// BOTTOM SPACES -------------------------------
+// In limited use cases, a bottom margin space can be applied to non-text object. 
+/* Object only */
+$object-bottom-space: 				    0rem 0rem 0.63rem 0rem;
+$object-bottom-space-bp-md: 			0rem 0rem 0.59rem 0rem;
+$object-bottom-space-bp-lg:			    0rem 0rem 0.681rem 0rem;
+
+// VERTICAL PADDINGS -------------------------------
+// In some limited cases, spacing is needed within an item to the same visuals sizes as the top spaces. This is applied via padding.
+/* Object only */
+$vertical-padding-none:                 0rem 0rem 0rem 0rem; /* all screen ranges */
+$vertical-padding-regular:              0.4545rem 0rem 0.4545rem 0rem; /* all screen ranges */
+$vertical-padding-medium:               1.1818rem 0rem 1.1818rem 0rem;
+$vertical-padding-medium-bp-lg:         1.3636rem 0rem 1.3636rem 0rem;
+$vertical-padding-large:                1.9091rem 0rem 1.9091rem 0rem;
+$vertical-padding-large-bp-lg:          2.4091rem 0rem 2.4091rem 0rem;
+
+// PANEL PADDING -------------------------------
+// Used within the Text Panel static pattern anywhere where content is inset within a visible box.
+$panel-padding-small:        	12px 20px 8px 20px; 
+$panel-padding-medium:			21px 30px 17px 30px;
+$panel-padding-large:			15px 30px;
+
+
+//--------------------------------------------------------------------
+// Variables - Activity Container (Interactions)
+//--------------------------------------------------------------------
+$interaction-padding-tb-small:     15px;
+$interaction-padding-tb:           20px;
+$interaction-padding-lr-small:     20px;
+$interaction-padding-lr:           30px;
+$interaction-feedback-padding:     10px;
+$interaction-feedback-margin:      10px;
+
+// Font Sizes
+$default-font-size: $base-font-size;
+
+// Line Height
+$default-line-height: $base-line-height; // 1.5 /* 33px */
+
+// Content Margins
+// The margins on the main content.
+
+$content-margin-xsmall:         0px !default; 
+$content-margin-small:          0px !default;
+$content-margin-medium:         0px !default;
+$content-margin-large:          0px !default; 
+
+
+//--------------------------------------------------------------------
+// PROJECT SPACING VALUES
+//--------------------------------------------------------------------
+
+// Here a program project chooses which of the available size options established in the DSS SPACING VALUES they will use. 
+// A program chooses two values - a reduced size value and an increased value. 
+// One of these is then preset within item classes (as appriopriate), and the oppostie is made available to the Habitat content author via the More Styles options.
+// Likely combinations within a program will be 1) equalize + Medium or 2) regular + large
+
+/* Reduced Top Space */
+/* Text */
+$text-top-space-reduced:                $text-top-space-regular;
+/* Object */
+$object-top-space-reduced:              $object-top-space-regular;
+$object-top-space-reduced-bp-md:        $object-top-space-regular-bp-md;
+$object-top-space-reduced-bp-lg:        $object-top-space-regular-bp-lg;
+
+/* Increased Top Space */
+/* Text */
+$text-top-space-increased:              $text-top-space-large;
+$text-top-space-increased-bp-lg:        $text-top-space-large-bp-lg;
+/* Object */
+$object-top-space-increased:            $object-top-space-large;
+$object-top-space-increased-bp-md:      $object-top-space-large-bp-md;
+$object-top-space-increased-bp-lg:      $object-top-space-large-bp-lg;
+
+/* Vertical padding */
+$vertical-padding-reduced:              $vertical-padding-regular;
+$vertical-padding-increased:            $vertical-padding-large;
+$vertical-padding-increased-bp-lg:      $vertical-padding-large-bp-lg;
+
+/* Spacer margin: Increase top space via spacer pattern */
+$spacer-increased:                      nth($text-top-space-increased, 1) - nth($text-top-space-reduced, 1);
+$spacer-increased-bp-lg:                nth($text-top-space-increased-bp-lg, 1) - nth($text-top-space-reduced, 1);
+
+// The default width of padding on sections and side notes.
+$padding-width:                 20px;
+
+// Default grid padding (when using .grid-padding).
+$grid-padding-width:            calc($padding-width/2); // Used in _layouts.scss
+
+// Default width of list indentation.
+$indent-unit:                   $base-line-height; // used in _typography
+
+$top-margin-small:              20px !default;
+$top-margin-medium:             57px !default;
+// $top-margin-large:              57px !default;
+
+$bottom-margin-small:           20px !default;
+$bottom-margin-medium:          57px !default;
+$bottom-margin-large:           57px !default; 
+
+
+//--------------------------------------------------------------------
+// Layout options
+//--------------------------------------------------------------------
+
+// Truncate figure captions to a single line with elipses.
+$truncate-figure-caption:       false;
+
+/*------------------------------------------------------------------
+ * Flexgrid
+ *----------------------------------------------------------------*/
+
+
+/**
+ * Grid setup
+ *
+ * The grid will calculate dimensions based on these two variables:
+ * $fg-columns will inform the grid loops how many columns there should be.
+ * $fg-gutter will inform the grid loops how big eac column's gutters should be.
+ *
+ * The grid will name columns, rows, offsets based on these three variables:
+ * $fg-class-row string used for the row class
+ * $fg-class-col string used for the column class
+ * $fg-class-off string used for the offset class
+ */
+ $fg-columns: 12 !default;
+ $fg-gutter: 15px !default;
+ $fg-gutter-sm: 10px !default;
+ 
+ $fg-class-row: 'row' !default;
+ $fg-class-col: 'col' !default;
+ $fg-class-off: 'off' !default;
+ 
+ 
+ 
+ /**
+  * Break point namespace object
+  *
+  * Set the default namespace object with these defaults with the
+  * understanding that you can pass in whatever you might require for your site.
+  *
+  * $fg-breakpoints is a Sass list with nested lists inside. Each sub list defines two things.
+  * 1. The namespace for that breakpoint. (Required) (i.e. xs, sm, md, lg)
+  * 2. The min-width measurement for the breakpoint for that namespace. (i.e. 48em, 62em, 75em)
+  *
+  * Note: These should be in the proper order (at least till libsass handles map keys properly).
+  *
+  * Note: If the measurement is left out then it will be skipped when generating
+  * the grid and applied to global styles.
+  *
+  */
+ $fg-breakpoints: (
+   (xs),
+   (sm, 480px),
+   (md, 650px),
+   (lg, 880px),
+   (xl, 1280px) 
+ ) !default;

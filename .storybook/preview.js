@@ -1,5 +1,7 @@
 import '../src/assets/css/source.css';
 import '../src/assets/css/custom-ush.css';
+import '../src/assets/css/custom_dbi.css';
+import '../src/assets/css/custom_racism.css';
 
 export const parameters = {
   themes: {
@@ -18,7 +20,13 @@ export const parameters = {
       {
         name: 'DBI',
         class: 'dbi',
-        color: 'green'
+        color: '#A733FF'
+      },
+
+      {
+        name: 'Confronting Racism',
+        class: 'racism',
+        color: '#FFF200'
       }
     ]
   },
