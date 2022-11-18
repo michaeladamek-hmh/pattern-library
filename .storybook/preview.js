@@ -1,9 +1,39 @@
 import '../src/assets/css/source.css';
 import '../src/assets/css/custom-ush.css';
 import '../src/assets/css/custom_dbi.css';
-import '../src/assets/css/custom_racism.css';
+import '../src/assets/css/custom-racism.css';
+import '../src/assets/css/custom-lit68.css'
 
 export const parameters = {
+  backgrounds: {
+    default: 'grade68',
+    values: [
+      {
+        name: 'gradek',
+        value: '#00aced',
+      },
+      {
+        name: 'grade1',
+        value: '#3b5998',
+      },
+      {
+        name: 'grade23',
+        value: '#00aced',
+      },
+      {
+        name: 'grade45',
+        value: '#3b5998',
+      },
+      {
+        name: 'grade68',
+        value: '#00aced',
+      },
+      {
+        name: 'grade912',
+        value: '#3b5998',
+      },
+    ],
+  },
   themes: {
     default: 'Source',
     list: [
@@ -22,11 +52,15 @@ export const parameters = {
         class: 'dbi',
         color: '#A733FF'
       },
-
       {
         name: 'Confronting Racism',
         class: 'racism',
         color: '#FFF200'
+      },
+      {
+        name: 'Into Lit 6-8',
+        class: 'lit68',
+        color: '#00326b'
       }
     ]
   },
