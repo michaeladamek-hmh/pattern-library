@@ -5,35 +5,6 @@ import '../src/assets/css/custom-racism.css';
 import '../src/assets/css/custom-lit68.css'
 
 export const parameters = {
-  backgrounds: {
-    default: 'grade68',
-    values: [
-      {
-        name: 'gradek',
-        value: '#00aced',
-      },
-      {
-        name: 'grade1',
-        value: '#3b5998',
-      },
-      {
-        name: 'grade23',
-        value: '#00aced',
-      },
-      {
-        name: 'grade45',
-        value: '#3b5998',
-      },
-      {
-        name: 'grade68',
-        value: '#00aced',
-      },
-      {
-        name: 'grade912',
-        value: '#3b5998',
-      },
-    ],
-  },
   themes: {
     default: 'Source',
     list: [
