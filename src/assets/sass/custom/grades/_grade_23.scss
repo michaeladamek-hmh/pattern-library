@@ -15,7 +15,10 @@ $primary-lg: 6;
 $primary-xl: $primary-lg;
 
 $border-width: 0.25rem;
-$border-radius: 0.625rem;
+$border-radius: 0.5rem;
+
+$ui-mobile: 1;
+$ui-desktop: 2;
 
 * {
   font-variant-ligatures: none;

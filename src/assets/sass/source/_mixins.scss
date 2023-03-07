@@ -84,20 +84,12 @@
 
   @include respond-sm {
     $type-difference: nth($type-size-lg, $size) - nth($type-size, $size);
-    $lheight-difference: nth($head-lheight-lg, $size) -
-      nth($head-lheight, $size);
+    $lheight-difference: nth($head-lheight-lg, $size) - nth($head-lheight, $size);
     $bp-difference: $bp-xl - $bp-sm;
     $type-multiplier: calc($type-difference / $bp-difference);
     $lheight-multiplier: calc($lheight-difference / $bp-difference);
-    font-size: calc(
-      (100vw - #{$bp-sm}) * #{$type-multiplier} + #{nth($type-size, $size)}
-    );
-    line-height: calc(
-      (100vw - #{$bp-sm}) * #{$lheight-multiplier} + #{nth(
-          $head-lheight,
-          $size
-        )}
-    );
+    font-size: calc((100vw - #{$bp-sm}) * #{$type-multiplier} + #{nth($type-size, $size)});
+    line-height: calc((100vw - #{$bp-sm}) * #{$lheight-multiplier} + #{nth($head-lheight, $size)});
   }
 
   @include respond-xl {
@@ -154,9 +146,6 @@
   }
 }
 
-
-
-
 @mixin source__icon {
   position: relative;
 
@@ -174,99 +163,99 @@
 }
 
 @mixin source__icon--xs {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 1);
-    --icon-size: nth($icon-boxed, 1);
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 1);
+  --icon-size: nth($icon-boxed, 1);
 }
 
 @mixin source__icon--xs--unboxed {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 1);
-    --icon-size: nth($icon-wrap, 1);
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 1);
+  --icon-size: nth($icon-wrap, 1);
 }
 
 @mixin source__icon--sm {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 1);
-    --icon-size: nth($icon-boxed, 1);
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 1);
+  --icon-size: nth($icon-boxed, 1);
 
-    @include respond-md {
-      --icon-wrap: nth($icon-wrap, 2);
-      --icon-size: nth($icon-boxed, 2);
-    }
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 2);
+    --icon-size: nth($icon-boxed, 2);
+  }
 }
 
 @mixin source__icon--sm--unboxed {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 1);
-    --icon-size: nth($icon-wrap, 1);
-    @include respond-md {
-        --icon-wrap: nth($icon-wrap, 2);
-        --icon-size: nth($icon-wrap, 2);
-    }
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 1);
+  --icon-size: nth($icon-wrap, 1);
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 2);
+    --icon-size: nth($icon-wrap, 2);
+  }
 }
 
 @mixin source__icon--md {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 2);
-    --icon-size: nth($icon-boxed, 2);
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 2);
+  --icon-size: nth($icon-boxed, 2);
 
-    @include respond-md {
-      --icon-wrap: nth($icon-wrap, 3);
-      --icon-size: nth($icon-boxed, 3);
-    }
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 3);
+    --icon-size: nth($icon-boxed, 3);
+  }
 }
 
 @mixin source__icon--md--unboxed {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 2);
-    --icon-size: nth($icon-wrap, 2);
-    @include respond-md {
-        --icon-wrap: nth($icon-wrap, 3);
-        --icon-size: nth($icon-wrap, 3);
-    }
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 2);
+  --icon-size: nth($icon-wrap, 2);
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 3);
+    --icon-size: nth($icon-wrap, 3);
+  }
 }
 
 @mixin source__icon--lg {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 3);
-    --icon-size: nth($icon-boxed, 3);
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 3);
+  --icon-size: nth($icon-boxed, 3);
 
-    @include respond-md {
-      --icon-wrap: nth($icon-wrap, 4);
-      --icon-size: nth($icon-boxed, 4);
-    }
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 4);
+    --icon-size: nth($icon-boxed, 4);
+  }
 }
 
 @mixin source__icon--lg--unboxed {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 3);
-    --icon-size: nth($icon-wrap, 3);
-    @include respond-md {
-        --icon-wrap: nth($icon-wrap, 4);
-        --icon-size: nth($icon-wrap, 4);
-    }
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 3);
+  --icon-size: nth($icon-wrap, 3);
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 4);
+    --icon-size: nth($icon-wrap, 4);
+  }
 }
 
 @mixin source__icon--xl {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 4);
-    --icon-size: nth($icon-boxed, 4);
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 4);
+  --icon-size: nth($icon-boxed, 4);
 
-    @include respond-md {
-      --icon-wrap: nth($icon-wrap, 5);
-      --icon-size: nth($icon-boxed, 5);
-    }
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 5);
+    --icon-size: nth($icon-boxed, 5);
+  }
 }
 
 @mixin source__icon--xl--unboxed {
-    @include source__icon;
-    --icon-wrap: nth($icon-wrap, 4);
-    --icon-size: nth($icon-wrap, 4);
-    @include respond-md {
-        --icon-wrap: nth($icon-wrap, 5);
-        --icon-size: nth($icon-wrap, 5);
-    }
+  @include source__icon;
+  --icon-wrap: nth($icon-wrap, 4);
+  --icon-size: nth($icon-wrap, 4);
+  @include respond-md {
+    --icon-wrap: nth($icon-wrap, 5);
+    --icon-size: nth($icon-wrap, 5);
+  }
 }
 
 @mixin source__icon--internal--left-top {
@@ -274,6 +263,14 @@
   &:before {
     left: 0;
     top: 0;
+  }
+}
+
+@mixin source__icon--internal--left-text {
+  padding-left: $icon--internal--padding;
+  &:before {
+    top: calc((var(--icon-wrap) - var(--base-lheight)) / -2);
+    left: 0;
   }
 }
 
@@ -432,7 +429,6 @@
     bottom: var(--half-lheight);
     left: var(--half-lheight);
   }
-
 }
 
 @mixin source__icon--panel--internal--right-top {
@@ -460,7 +456,6 @@
     bottom: var(--half-lheight);
     right: var(--half-lheight);
   }
-
 }
 
 @mixin source__icon--panel--internal--top-left {
@@ -732,7 +727,6 @@
   padding-top: $icon--corner--padding;
   padding-left: $icon--corner--padding;
   margin-top: $icon--border--margin;
-  
 
   &:before {
     top: $icon--border--hor-position;
@@ -770,5 +764,30 @@
   &:before {
     bottom: $icon--border--hor-position;
     right: $icon--border--hor-position;
+  }
+}
+
+@mixin footer-content($bg-color) {
+  position: relative;
+  bottom: unset;
+  width: auto;
+  height: auto;
+  background-color: $bg-color;
+  transform: translateX(0);
+  margin-bottom: 0;
+
+  &:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    width: calc(100% + 2 * var(--gutter-width));
+    height: 100%;
+    left: calc(-1 * var(--gutter-width));
+    top: 0;
+    background-color: $bg-color;
+  }
+
+  @include respond-md {
+    transform: translateX(0);
   }
 }

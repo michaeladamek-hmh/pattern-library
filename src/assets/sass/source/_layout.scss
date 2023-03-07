@@ -1,6 +1,6 @@
 body,
 .source__grid {
-  & > *:not(.source--full-width):not(.source__grid):not(.source--no-marginlr):not(section):not(#root) {
+  & > *:not(.source--full-width):not(.source__grid):not(.source--no-marginlr):not(section) {
     @include respond-md {
       margin-left: var(--half-lheight);
       margin-right: var(--half-lheight);
@@ -14,9 +14,6 @@ body,
 }
 
 .source--margintop {
-  &-none {
-    @include margin-above(0);
-  }
   &-half {
     @include margin-above(0.5);
   }

@@ -341,3 +341,18 @@ $icon--border--padding: calc((var(--base-lheight) + var(--icon-wrap)) / 2);
 $icon--border--hor-position: calc((var(--icon-wrap) + #{$border-width}) / -2);
 $icon--border--margin: calc((var(--icon-wrap) / 2) + var(--base-lheight));
 $icon--corner--padding: calc(var(--icon-wrap) / 2);
+
+
+// Shadow levels
+
+$shadow-lv1: 0px 0.0625rem 0.125rem 0px rgba(0,0,0,0.3), 0px 0.0625rem 0.1875rem 0.0625rem rgba(0,0,0,0.15);
+$shadow-lv2: 0px 0.0625rem 0.125rem 0px rgba(0,0,0,0.3), 0px 0.125rem 0.375rem 0.125rem rgba(0,0,0,0.15);
+$shadow-lv3: 0px 0.0625rem 0.1875rem 0px rgba(0,0,0,0.3), 0px 0.25rem 0.5rem 0.1875rem rgba(0,0,0,0.15);
+$shadow-lv4: 0px 0.125rem 0.1875rem 0px rgba(0,0,0,0.3), 0px 0.375rem 0.625rem 0.25rem rgba(0,0,0,0.15);
+$shadow-lv5: 0px 0.25rem 0.25rem 0px rgba(0,0,0,0.3), 0px 0.5rem 0.75rem 0.375rem rgba(0,0,0,0.15);
+
+$shadow: $shadow-lv1 $shadow-lv2 $shadow-lv3 $shadow-lv4 $shadow-lv5;
+
+$shadow-default: nth($shadow, 1);
+$shadow-hover: nth($shadow, 3);
+$shadow-active: nth($shadow, 5);
