@@ -86,8 +86,8 @@
     $type-difference: nth($type-size-lg, $size) - nth($type-size, $size);
     $lheight-difference: nth($head-lheight-lg, $size) - nth($head-lheight, $size);
     $bp-difference: $bp-xl - $bp-sm;
-    $type-multiplier: calc($type-difference / $bp-difference);
-    $lheight-multiplier: calc($lheight-difference / $bp-difference);
+    $type-multiplier: $type-difference / $bp-difference;
+    $lheight-multiplier: $lheight-difference / $bp-difference;
     font-size: calc((100vw - #{$bp-sm}) * #{$type-multiplier} + #{nth($type-size, $size)});
     line-height: calc((100vw - #{$bp-sm}) * #{$lheight-multiplier} + #{nth($head-lheight, $size)});
   }

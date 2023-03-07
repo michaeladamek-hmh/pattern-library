@@ -176,7 +176,7 @@ $non-text-space-medium: 0.41rem 0 0.59rem 0;
 $non-text-space-large: 0.681rem 0;
 
 // Default grid padding (when using .grid-padding).
-$grid-padding-width: calc($padding-width / 2);
+$grid-padding-width: $padding-width/2;
 
 // Default width of list indentation.
 $indent-unit: $base-line-height;

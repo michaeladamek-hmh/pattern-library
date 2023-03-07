@@ -124,6 +124,25 @@ $para-lheight-quart-lv16: 0.75rem;
 
 $para-lheight-quart: $para-lheight-quart-lv1 $para-lheight-quart-lv2 $para-lheight-quart-lv3 $para-lheight-quart-lv4 $para-lheight-quart-lv5 $para-lheight-quart-lv6 $para-lheight-quart-lv7 $para-lheight-quart-lv8 $para-lheight-quart-lv9 $para-lheight-quart-lv10 $para-lheight-quart-lv11 $para-lheight-quart-lv12 $para-lheight-quart-lv13 $para-lheight-quart-lv14 $para-lheight-quart-lv15 $para-lheight-quart-lv16;
 
+$para-lheight-eighth-lv1: 0.125rem;
+$para-lheight-eighth-lv2: 0.1875rem;
+$para-lheight-eighth-lv3: 0.1875rem;
+$para-lheight-eighth-lv4: 0.1875rem;
+$para-lheight-eighth-lv5: 0.25rem;
+$para-lheight-eighth-lv6: 0.25rem;
+$para-lheight-eighth-lv7: 0.25rem;
+$para-lheight-eighth-lv8: 0.25rem;
+$para-lheight-eighth-lv9: 0.3125rem;
+$para-lheight-eighth-lv10: 0.3125rem;
+$para-lheight-eighth-lv11: 0.375rem;
+$para-lheight-eighth-lv12: 0.3125rem;
+$para-lheight-eighth-lv13: 0.375rem;
+$para-lheight-eighth-lv14: 0.375rem;
+$para-lheight-eighth-lv15: 0.375rem;
+$para-lheight-eighth-lv16: 0.375rem;
+
+$para-lheight-eighth: $para-lheight-eighth-lv1 $para-lheight-eighth-lv2 $para-lheight-eighth-lv3 $para-lheight-eighth-lv4 $para-lheight-eighth-lv5 $para-lheight-eighth-lv6 $para-lheight-eighth-lv7 $para-lheight-eighth-lv8 $para-lheight-eighth-lv9 $para-lheight-eighth-lv10 $para-lheight-eighth-lv11 $para-lheight-eighth-lv12 $para-lheight-eighth-lv13 $para-lheight-eighth-lv14 $para-lheight-eighth-lv15 $para-lheight-eighth-lv16;
+
 $para-lheight-md-lv1: $para-lheight-lv1;
 $para-lheight-md-lv2: $para-lheight-lv2;
 $para-lheight-md-lv3: $para-lheight-lv3;
@@ -181,6 +200,25 @@ $para-lheight-md-quart-lv16: 1.1875rem;
 
 $para-lheight-md-quart: $para-lheight-md-quart-lv1 $para-lheight-md-quart-lv2 $para-lheight-md-quart-lv3 $para-lheight-md-quart-lv4 $para-lheight-md-quart-lv5 $para-lheight-md-quart-lv6 $para-lheight-md-quart-lv7 $para-lheight-md-quart-lv8 $para-lheight-md-quart-lv9 $para-lheight-md-quart-lv10 $para-lheight-md-quart-lv11 $para-lheight-md-quart-lv12 $para-lheight-md-quart-lv13 $para-lheight-md-quart-lv14 $para-lheight-md-quart-lv15 $para-lheight-md-quart-lv16;
 
+$para-lheight-md-eighth-lv1: $para-lheight-eighth-lv1;
+$para-lheight-md-eighth-lv2: $para-lheight-eighth-lv2;
+$para-lheight-md-eighth-lv3: $para-lheight-eighth-lv3;
+$para-lheight-md-eighth-lv4: 0.25rem;
+$para-lheight-md-eighth-lv5: $para-lheight-eighth-lv5;
+$para-lheight-md-eighth-lv6: 0.25rem;
+$para-lheight-md-eighth-lv7: 0.25rem;
+$para-lheight-md-eighth-lv8: 0.3125rem;
+$para-lheight-md-eighth-lv9: 0.3125rem;
+$para-lheight-md-eighth-lv10: 0.375rem;
+$para-lheight-md-eighth-lv11: 0.4375rem;
+$para-lheight-md-eighth-lv12: 0.4375rem;
+$para-lheight-md-eighth-lv13: 0.5rem;
+$para-lheight-md-eighth-lv14: 0.5rem;
+$para-lheight-md-eighth-lv15: 0.5625rem;
+$para-lheight-md-eighth-lv16: 0.625rem;
+
+$para-lheight-md-eighth: $para-lheight-md-eighth-lv1 $para-lheight-md-eighth-lv2 $para-lheight-md-eighth-lv3 $para-lheight-md-eighth-lv4 $para-lheight-md-eighth-lv5 $para-lheight-md-eighth-lv6 $para-lheight-md-eighth-lv7 $para-lheight-md-eighth-lv8 $para-lheight-md-eighth-lv9 $para-lheight-md-eighth-lv10 $para-lheight-md-eighth-lv11 $para-lheight-md-eighth-lv12 $para-lheight-md-eighth-lv13 $para-lheight-md-eighth-lv14 $para-lheight-md-eighth-lv15 $para-lheight-md-eighth-lv16;
+
 $para-lheight-lg-lv1: $para-lheight-md-lv1;
 $para-lheight-lg-lv2: $para-lheight-md-lv2;
 $para-lheight-lg-lv3: $para-lheight-md-lv3;
@@ -237,6 +275,25 @@ $para-lheight-lg-quart-lv15: 1.625rem;
 $para-lheight-lg-quart-lv16: 2rem;
 
 $para-lheight-lg-quart: $para-lheight-lg-quart-lv1 $para-lheight-lg-quart-lv2 $para-lheight-lg-quart-lv3 $para-lheight-lg-quart-lv4 $para-lheight-lg-quart-lv5 $para-lheight-lg-quart-lv6 $para-lheight-lg-quart-lv7 $para-lheight-lg-quart-lv8 $para-lheight-lg-quart-lv9 $para-lheight-lg-quart-lv10 $para-lheight-lg-quart-lv11 $para-lheight-lg-quart-lv12 $para-lheight-lg-quart-lv13 $para-lheight-lg-quart-lv14 $para-lheight-lg-quart-lv15 $para-lheight-lg-quart-lv16;
+
+$para-lheight-lg-eighth-lv1: $para-lheight-md-eighth-lv1;
+$para-lheight-lg-eighth-lv2: $para-lheight-md-eighth-lv2;
+$para-lheight-lg-eighth-lv3: $para-lheight-md-eighth-lv3;
+$para-lheight-lg-eighth-lv4: $para-lheight-md-eighth-lv4;
+$para-lheight-lg-eighth-lv5: $para-lheight-md-eighth-lv5;
+$para-lheight-lg-eighth-lv6: 0.25rem;
+$para-lheight-lg-eighth-lv7: 0.3125rem;
+$para-lheight-lg-eighth-lv8: 0.3125rem;
+$para-lheight-lg-eighth-lv9: 0.375rem;
+$para-lheight-lg-eighth-lv10: 0.4375rem;
+$para-lheight-lg-eighth-lv11: 0.5rem;
+$para-lheight-lg-eighth-lv12: 0.5rem;
+$para-lheight-lg-eighth-lv13: 0.625rem;
+$para-lheight-lg-eighth-lv14: 0.6875rem;
+$para-lheight-lg-eighth-lv15: 0.8125rem;
+$para-lheight-lg-eighth-lv16: 1rem;
+
+$para-lheight-lg-eighth: $para-lheight-lg-eighth-lv1 $para-lheight-lg-eighth-lv2 $para-lheight-lg-eighth-lv3 $para-lheight-lg-eighth-lv4 $para-lheight-lg-eighth-lv5 $para-lheight-lg-eighth-lv6 $para-lheight-lg-eighth-lv7 $para-lheight-lg-eighth-lv8 $para-lheight-lg-eighth-lv9 $para-lheight-lg-eighth-lv10 $para-lheight-lg-eighth-lv11 $para-lheight-lg-eighth-lv12 $para-lheight-lg-eighth-lv13 $para-lheight-lg-eighth-lv14 $para-lheight-lg-eighth-lv15 $para-lheight-lg-eighth-lv16;
 
 $head-lheight-lv1: $para-lheight-lv1;
 $head-lheight-lv2: $para-lheight-lv2;

@@ -163,18 +163,29 @@ table {
     url("fonts/sourceserifvariable-italic.ttf") format("truetype");
 }
 
-// @font-face {
-//   font-family: "Source Code Pro";
-//   font-weight: 200 900;
-//   font-style: normal;
-//   font-stretch: normal;
-//   src: url("fonts/sourcecodevariable-roman.ttf") format("truetype");
-// }
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("fonts/sourcecodevariable-roman.ttf") format("truetype");
+}
 
-// @font-face {
-//   font-family: "Source Code Pro";
-//   font-weight: 200 900;
-//   font-style: italic;
-//   font-stretch: normal;
-//   src: url("fonts/sourcecodevariable-italic.ttf") format("truetype");
-// }
+@font-face {
+  font-family: "Source Code Pro";
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url("fonts/sourcecodevariable-italic.ttf") format("truetype");
+}
+
+*:focus {
+  outline: none; 
+}
+
+*:focus-visible:not(.source__flipcards summary), 
+.source__flipcards details:not([open]) summary:focus-visible .source__flipcards__front, 
+.source__flipcards details[open] summary:focus-visible {
+   --focus-indicator: 0px 0px 0px 1px #fff, 0px 0px 0px 3px #ca0092, 0 0 0 4px #fff;
+   box-shadow: var(--focus-indicator);
+}
