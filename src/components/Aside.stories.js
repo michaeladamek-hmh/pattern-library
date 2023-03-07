@@ -28,7 +28,7 @@ AlignedLeft.args = {
 export const WithImage = Template.bind({});
 WithImage.args = {
     side: 'right',
-    text: `This is an aside aligned to the right`,
+    text: `This is the source of the image`,
     blockquote: false,
     image: true
 };
@@ -36,6 +36,8 @@ WithImage.args = {
 export const WithBlockquote = Template.bind({});
 WithBlockquote.args = {
     side: 'right',
+    text: 'This is a blockquote',
+    source: 'This is the source of the quote',
     blockquote: true,
     image: false
 };
