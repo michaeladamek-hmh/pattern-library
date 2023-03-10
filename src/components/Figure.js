@@ -1,9 +1,9 @@
 import img from  '../assets/img/source-img.svg';
 import PropTypes from 'prop-types';
 
-function Figure({ image, caption, grade }) {
+function Figure({ styles, caption, grade }) {
     return (
-        <figure>
+        <figure style={ styles } >
             <img src={ img } alt="placeholder" /> 
             {caption
                 ? <figcaption>{ caption }</figcaption>
